@@ -28,7 +28,7 @@ public class EasyEase {
 	 */
 	public EasyEase(PApplet theSketch) {
 		init(theSketch);
-		generator = new EasingMethods(this.motionFrameRate, this.expIntensity, this.totalLength, this.span, this.delay);
+		generator = new EasingMethods(this.expIntensity, this.totalLength, this.span, this.delay, this.motionFrameRate);
 
 	}
 
@@ -41,7 +41,7 @@ public class EasyEase {
 	 */
 	public EasyEase(PApplet theSketch, float expIntensity) {
 		init(theSketch);
-		generator = new EasingMethods(this.motionFrameRate, expIntensity, this.totalLength, this.span, this.delay);
+		generator = new EasingMethods(expIntensity, this.totalLength, this.span, this.delay, this.motionFrameRate);
 
 	}
 
@@ -56,7 +56,23 @@ public class EasyEase {
 	 */
 	public EasyEase(PApplet theSketch, float expIntensity, float totalLength, float span, float delay) {
 		init(theSketch);
-		generator = new EasingMethods(this.motionFrameRate, expIntensity, totalLength, span, delay);
+		generator = new EasingMethods(expIntensity, totalLength, span, delay, this.motionFrameRate);
+	}
+
+	/**
+	 * Constructs an instance of the EasyEase class with specified parameter
+	 * including the global frameRate.
+	 * 
+	 * @param theSketch    The parent PApplet.
+	 * @param expIntensity The intensity/exponent value of the easing curve.
+	 * @param totalLength  The maximum and total length of the easing motion
+	 * @param span         The span of the easing motion.
+	 * @param delay        The delay before the easing motion starts.
+	 */
+	public EasyEase(PApplet theSketch, float expIntensity, float totalLength, float span, float delay,
+			float frameRate) {
+		init(theSketch);
+		generator = new EasingMethods(expIntensity, totalLength, span, delay, frameRate);
 	}
 
 	/**
@@ -179,10 +195,87 @@ public class EasyEase {
 
 	}
 
-	/////////////
+	////////////////////
 	// EASING METHODS:
-	////////////
+	////////////////////
+	////////////////////
 
+	/////////// IN - EXPO
+	/**
+	 * Applies the in easing method to calculate a value between start and end.
+	 *
+	 * @param start The starting value.
+	 * @param end   The ending value.
+	 * @return The eased value.
+	 */
+	public float in(float start, float end) {
+		return generator.in(start, end);
+	}
+
+	/**
+	 * Applies the in easing method to calculate a value between start and end
+	 * with a specified type.
+	 *
+	 * @param start The starting value.
+	 * @param end   The ending value.
+	 * @param type  The easing type.
+	 * @return The eased value.
+	 */
+	public float in(float start, float end, String type) {
+		return generator.in(start, end, type);
+	}
+
+	/**
+	 * Applies the in easing method to calculate a value between 0 and 1 based on
+	 * the input.
+	 *
+	 * @param inputCt The input value between 0 and 1.
+	 * @return The eased value.
+	 */
+	public float in(float inputCt) {
+		return generator.in(inputCt);
+	}
+	
+
+	/////////// OUT - EXPO
+	/**
+	 * Applies the out easing method to calculate a value between start and end.
+	 *
+	 * @param start The starting value.
+	 * @param end   The ending value.
+	 * @return The eased value.
+	 */
+	public float out(float start, float end) {
+		return generator.out(start, end);
+	}
+
+	/**
+	 * Applies the out easing method to calculate a value between start and end
+	 * with a specified type.
+	 *
+	 * @param start The starting value.
+	 * @param end   The ending value.
+	 * @param type  The easing type.
+	 * @return The eased value.
+	 */
+	public float out(float start, float end, String type) {
+		return generator.out(start, end, type);
+	}
+
+	/**
+	 * Applies the out easing method to calculate a value between 0 and 1 based on
+	 * the input.
+	 *
+	 * @param inputCt The input value between 0 and 1.
+	 * @return The eased value.
+	 */
+	public float out(float inputCt) {
+		return generator.out(inputCt);
+	}
+	
+	
+	
+	/////////// IN - OUT - EXPO
 	/**
 	 * Applies the inOut easing method to calculate a value between start and end.
 	 *
@@ -191,11 +284,12 @@ public class EasyEase {
 	 * @return The eased value.
 	 */
 	public float inOut(float start, float end) {
-	    return generator.inOut(start, end);
+		return generator.inOut(start, end);
 	}
 
 	/**
-	 * Applies the inOut easing method to calculate a value between start and end with a specified type.
+	 * Applies the inOut easing method to calculate a value between start and end
+	 * with a specified type.
 	 *
 	 * @param start The starting value.
 	 * @param end   The ending value.
@@ -203,16 +297,17 @@ public class EasyEase {
 	 * @return The eased value.
 	 */
 	public float inOut(float start, float end, String type) {
-	    return generator.inOut(start, end, type);
+		return generator.inOut(start, end, type);
 	}
 
 	/**
-	 * Applies the inOut easing method to calculate a value between 0 and 1 based on the input.
+	 * Applies the inOut easing method to calculate a value between 0 and 1 based on
+	 * the input.
 	 *
 	 * @param inputCt The input value between 0 and 1.
 	 * @return The eased value.
 	 */
 	public float inOut(float inputCt) {
-	    return generator.inOut(inputCt);
+		return generator.inOut(inputCt);
 	}
 }

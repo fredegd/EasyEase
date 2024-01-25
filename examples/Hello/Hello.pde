@@ -32,10 +32,10 @@ void draw() {
   background(1);
   translate(width * 0.1, height * 0.1);
   scale(0.8);
-
+stroke(255);
   for (int i =0; i<elements; i++) {
-    float x =easyease[i].inOut(0, width, "loop");
-    float y = map(i, 0, elements, 0, height);
+    float x =easyease[i].inOut(0, width,"loop");
+    float y = map(i, 0, elements-1, 0, height);
     ellipse(x, y, ts, ts);
   }
 
@@ -45,11 +45,13 @@ void draw() {
   //vertex(0, 0);
   for (float c = 0; c < 1; c += (1.0/30)) {
     float xc = map(c, 0, 1, 0, width);
-    float yc = displayCurve.inOut((c+frameCount*0.01)%1)*width;
+    float fac= c;//(c+frameCount/(60.0*totalLength))%1;
+    
+    float yc = displayCurve.inOut(fac)*width;
     // vertex(xc, yc);
 
-    stroke(displayCurve.inOut(expVal, c)*255);
-    line(xc, yc, xc, height);
+    stroke(displayCurve.inOut(fac)*255);
+    line(xc, height-yc, xc, height);
   }
   //vertex(width, height);
   //endShape();
