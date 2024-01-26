@@ -209,12 +209,13 @@ public class EasyEase {
 	 * @return The eased value.
 	 */
 	public float in(float start, float end) {
-		return generator.in(start, end);
+		String type = "regular";
+		return generator.in(start, end, type);
 	}
 
 	/**
-	 * Applies the in easing method to calculate a value between start and end
-	 * with a specified type.
+	 * Applies the in easing method to calculate a value between start and end with
+	 * a specified type.
 	 *
 	 * @param start The starting value.
 	 * @param end   The ending value.
@@ -222,7 +223,8 @@ public class EasyEase {
 	 * @return The eased value.
 	 */
 	public float in(float start, float end, String type) {
-		return generator.in(start, end, type);
+		String check = type == "alternate" ? "alternate-regular" : "";
+		return generator.in(start, end, check);
 	}
 
 	/**
@@ -233,9 +235,22 @@ public class EasyEase {
 	 * @return The eased value.
 	 */
 	public float in(float inputCt) {
-		return generator.in(inputCt);
+		String type = "controlled";// default
+		return generator.in(inputCt, type);
 	}
-	
+
+	/**
+	 * Applies the in easing method to calculate a value between 0 and 1 based on
+	 * the input and on the specified type.
+	 *
+	 * @param inputCt The input value between 0 and 1.
+	 * @return The eased value.
+	 */
+	public float in(float inputCt, String type) {
+		String check = type == "alternate" ? "alternate-controlled" : "";
+		return generator.in(inputCt, check);
+
+	}
 
 	/////////// OUT - EXPO
 	/**
@@ -246,12 +261,13 @@ public class EasyEase {
 	 * @return The eased value.
 	 */
 	public float out(float start, float end) {
-		return generator.out(start, end);
+		String type = "regular";
+		return generator.out(start, end, type);
 	}
 
 	/**
-	 * Applies the out easing method to calculate a value between start and end
-	 * with a specified type.
+	 * Applies the out easing method to calculate a value between start and end with
+	 * a specified type.
 	 *
 	 * @param start The starting value.
 	 * @param end   The ending value.
@@ -259,7 +275,8 @@ public class EasyEase {
 	 * @return The eased value.
 	 */
 	public float out(float start, float end, String type) {
-		return generator.out(start, end, type);
+		String check = type == "alternate" ? "alternate-regular" : "";
+		return generator.out(start, end, check);
 	}
 
 	/**
@@ -270,11 +287,22 @@ public class EasyEase {
 	 * @return The eased value.
 	 */
 	public float out(float inputCt) {
-		return generator.out(inputCt);
+		String type = "controlled";// default
+		return generator.out(inputCt, type);
 	}
-	
-	
-	
+
+	/**
+	 * Applies the in easing method to calculate a value between 0 and 1 based on
+	 * the input and on the specified type.
+	 *
+	 * @param inputCt The input value between 0 and 1.
+	 * @return The eased value.
+	 */
+	public float out(float inputCt, String type) {
+		String check = type == "alternate" ? "alternate-controlled" : "";
+		return generator.out(inputCt, check);
+	}
+
 	/////////// IN - OUT - EXPO
 	/**
 	 * Applies the inOut easing method to calculate a value between start and end.
@@ -284,7 +312,8 @@ public class EasyEase {
 	 * @return The eased value.
 	 */
 	public float inOut(float start, float end) {
-		return generator.inOut(start, end);
+		String type = "regular";
+		return generator.inOut(start, end, type);
 	}
 
 	/**
@@ -297,7 +326,9 @@ public class EasyEase {
 	 * @return The eased value.
 	 */
 	public float inOut(float start, float end, String type) {
-		return generator.inOut(start, end, type);
+		String check = type == "alternate" ? "alternate-regular" : "";
+
+		return generator.inOut(start, end, check);
 	}
 
 	/**
@@ -308,6 +339,19 @@ public class EasyEase {
 	 * @return The eased value.
 	 */
 	public float inOut(float inputCt) {
-		return generator.inOut(inputCt);
+		String type = "controlled";// default
+		return generator.inOut(inputCt, type);
+	}
+
+	/**
+	 * Applies the inOut easing method to calculate a value between 0 and 1 based on
+	 * the input and on the specified type
+	 *
+	 * @param inputCt The input value between 0 and 1.
+	 * @return The eased value.
+	 */
+	public float inOut(float inputCt, String type) {
+		String check = type == "alternate" ? "alternate-controlled" : "";
+		return generator.inOut(inputCt, check);
 	}
 }
