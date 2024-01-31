@@ -664,8 +664,9 @@ public class EasingMethods {
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
 		return (float) (progress < 0.5
-				? (start + Math.pow(2 * progress, 2) * ((c2 + 1) * 2 * progress - c2) * (end - start) ) / 2
-				: ( start+( Math.pow(2 * progress - 2, 2) * ((c2 + 1) * (progress * 2 - 2) + c2) + 2) * (end - start)) / 2);
+				? (2*start + Math.pow(2 * progress, 2) * ((c2 + 1) * 2 * progress - c2) * (end - start) ) / 2
+				: ( 2*start+( Math.pow(2 * progress - 2, 2) * ((c2 + 1) * (progress * 2 - 2) + c2) + 2) * (end - start)) / 2);
+		
 
 	}
 
