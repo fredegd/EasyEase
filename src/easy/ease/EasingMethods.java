@@ -209,7 +209,7 @@ public class EasingMethods {
 	 * @return The converted frameCount value .
 	 */
 	public float framer(float input) {
-		return input / this.motionFrameRate;
+		return (float)(input/ this.motionFrameRate);
 	}
 
 	/**
@@ -314,15 +314,14 @@ public class EasingMethods {
 			break;
 		////// what about the delay here?
 		case "alternate-controlled":
-			valueToReturn = (sawWave((ct / (this.motionFrameRate * 2)) / (this.totalLength)) * this.totalLength)
+			valueToReturn = (sawWave((ct / (this.motionFrameRate * 2)) / (this.totalLength)) * this.totalLength -delay)
 					% this.totalLength;
 			break;
 		////// what about the delay here?
 
 		case "alternate-automated":
 			this.count += (this.step * this.motionFrameRate);
-			valueToReturn = (sawWave((this.count / this.motionFrameRate) / (2 * this.totalLength)) * this.totalLength)
-					% this.totalLength;
+			valueToReturn = (sawWave((this.count / this.motionFrameRate) / (2 * this.totalLength)) * this.totalLength - delay)% this.totalLength;
 
 			break;
 
