@@ -1,4 +1,4 @@
-# EasyEase
+# EasyEase library for Processing
 
 ### A collection of utility Functions for Easing motions and non linear distribution
 
@@ -11,13 +11,50 @@ The library provides a collection of function to help calculate the most common 
 - Bounce
 - Elastic
 
-### Approach:
+### Get Started:
+
+The esiest apporoach to get started with EasyEase in Processing is:
+
+- import the library
+````
+import easy.ease.*
+````
+
+- initialize an instance of EasyEase Class object and give it a name, for example ```mover```
+````
+EasyEase mover;
+````
+
+- in the setup() declare the EasyEase object initialized before
+````
+setup(){
+size(600, 600);
+mover = new EasyEase(this);
+}
+  ````
+
+- in the draw() an practical and convenient way to access the object´s build in functions is to call the desired Easing function method, and pass  in a ```counter```value (default between 0 and 1), a ```start``` value and an ```end``` value as parameters like in the example:
+````
+  float start = 50;
+  float stop = width-50;
+  float x = mover.out(counter,start, stop);
+  
+  ellipse(x,height/2,100,100);
+````
+
+### Easing Methods
+
+- EXPONENTIAL
 
 
-
+- SINUSOIDAL
+- CIRCULAR
+- BACK
+- BOUNCE
+- ELASTIC
 
 ### TestedPlatforms:
-- OS-X: Y
+- OS-X: Yes
 - Windows: ( not tested)
 - Linux: (not tested)
 
