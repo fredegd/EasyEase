@@ -1,7 +1,8 @@
 bin
 tmp
 web
-
+distribution
+resources
 .github
 .git
 .classpath
