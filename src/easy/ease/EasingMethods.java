@@ -202,6 +202,7 @@ public class EasingMethods {
 	public void resetCounter() {
 		this.count = 0f;
 	}
+
 	/**
 	 * converts the input value dividing it by the current frameRate.
 	 *
@@ -209,7 +210,7 @@ public class EasingMethods {
 	 * @return The converted frameCount value .
 	 */
 	public float framer(float input) {
-		return (float)(input/ this.motionFrameRate);
+		return (float) (input / this.motionFrameRate);
 	}
 
 	/**
@@ -314,14 +315,15 @@ public class EasingMethods {
 			break;
 		////// what about the delay here?
 		case "alternate-controlled":
-			valueToReturn = (sawWave((ct / (this.motionFrameRate * 2)) / (this.totalLength)) * this.totalLength -delay)
+			valueToReturn = (sawWave((ct / (this.motionFrameRate * 2)) / (this.totalLength)) * this.totalLength - delay)
 					% this.totalLength;
 			break;
 		////// what about the delay here?
 
 		case "alternate-automated":
 			this.count += (this.step * this.motionFrameRate);
-			valueToReturn = (sawWave((this.count / this.motionFrameRate) / (2 * this.totalLength)) * this.totalLength - delay)% this.totalLength;
+			valueToReturn = (sawWave((this.count / this.motionFrameRate) / (2 * this.totalLength)) * this.totalLength
+					- delay) % this.totalLength;
 
 			break;
 
@@ -372,7 +374,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float in(float inputCt, float start, float end, String type) {
+	public final float in(float inputCt, float start, float end, String type) {
 
 		float ex = this.expIntensity;
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
@@ -398,7 +400,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float out(float inputCt, float start, float end, String type) {
+	public final float out(float inputCt, float start, float end, String type) {
 		float ex = this.expIntensity;
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
@@ -424,7 +426,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float inOut(float inputCt, float start, float end, String type) {
+	public final float inOut(float inputCt, float start, float end, String type) {
 		float ex = this.expIntensity;
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
@@ -450,7 +452,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float inSine(float inputCt, float start, float end, String type) {
+	public final float inSine(float inputCt, float start, float end, String type) {
 		float ex = Math.abs(this.expIntensity) >= 1 ? reMap(this.expIntensity, 1f, 20f, 1f, 4f)
 				: Math.abs(this.expIntensity);
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
@@ -476,7 +478,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float outSine(float inputCt, float start, float end, String type) {
+	public final float outSine(float inputCt, float start, float end, String type) {
 		float ex = Math.abs(this.expIntensity) >= 1 ? reMap(this.expIntensity, 1f, 20f, 1f, 4f)
 				: Math.abs(this.expIntensity);
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
@@ -503,7 +505,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float inOutSine(float inputCt, float start, float end, String type) {
+	public final float inOutSine(float inputCt, float start, float end, String type) {
 		float ex = Math.abs(this.expIntensity) >= 1 ? reMap(this.expIntensity, 1f, 20f, 1f, 4f)
 				: Math.abs(this.expIntensity);
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
@@ -530,7 +532,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float inCirc(float inputCt, float start, float end, String type) {
+	public final float inCirc(float inputCt, float start, float end, String type) {
 		float ex = this.expIntensity;
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
@@ -555,7 +557,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float outCirc(float inputCt, float start, float end, String type) {
+	public final float outCirc(float inputCt, float start, float end, String type) {
 		float ex = this.expIntensity;
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
@@ -581,7 +583,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float inOutCirc(float inputCt, float start, float end, String type) {
+	public final float inOutCirc(float inputCt, float start, float end, String type) {
 		float ex = this.expIntensity;
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
@@ -610,7 +612,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float inBack(float inputCt, float start, float end, String type) {
+	public final float inBack(float inputCt, float start, float end, String type) {
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
 		return (float) (start + (c3 * Math.pow(progress, 3) - c1 * Math.pow(progress, 2)) * (end - start));
@@ -635,7 +637,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float outBack(float inputCt, float start, float end, String type) {
+	public final float outBack(float inputCt, float start, float end, String type) {
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
 		return (float) (start + (1 + c3 * Math.pow(progress - 1, 3) + c1 * Math.pow(progress - 1, 2)) * (end - start));
@@ -660,13 +662,14 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float inOutBack(float inputCt, float start, float end, String type) {
+	public final float inOutBack(float inputCt, float start, float end, String type) {
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
 		return (float) (progress < 0.5
-				? (2*start + Math.pow(2 * progress, 2) * ((c2 + 1) * 2 * progress - c2) * (end - start) ) / 2
-				: ( 2*start+( Math.pow(2 * progress - 2, 2) * ((c2 + 1) * (progress * 2 - 2) + c2) + 2) * (end - start)) / 2);
-		
+				? (2 * start + Math.pow(2 * progress, 2) * ((c2 + 1) * 2 * progress - c2) * (end - start)) / 2
+				: (2 * start
+						+ (Math.pow(2 * progress - 2, 2) * ((c2 + 1) * (progress * 2 - 2) + c2) + 2) * (end - start))
+						/ 2);
 
 	}
 
@@ -689,7 +692,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float inElastic(float inputCt, float start, float end, String type) {
+	public final float inElastic(float inputCt, float start, float end, String type) {
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
 		return (float) ((progress == 0) ? start
@@ -717,7 +720,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float outElastic(float inputCt, float start, float end, String type) {
+	public final float outElastic(float inputCt, float start, float end, String type) {
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
 		return (float) ((progress == 0) ? start
@@ -745,7 +748,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float inOutElastic(float inputCt, float start, float end, String type) {
+	public final float inOutElastic(float inputCt, float start, float end, String type) {
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
 		return (float) ((progress == 0) ? start
@@ -777,7 +780,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float inBounce(float inputCt, float start, float end, String type) {
+	public final float inBounce(float inputCt, float start, float end, String type) {
 		float ex = this.expIntensity;
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
@@ -803,7 +806,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float outBounce(float inputCt, float start, float end, String type) {
+	public final float outBounce(float inputCt, float start, float end, String type) {
 		float ex = this.expIntensity;
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
@@ -829,7 +832,7 @@ public class EasingMethods {
 	 * @param type    Which kind of motion
 	 * @return The eased progress between start and end.
 	 */
-	public float inOutBounce(float inputCt, float start, float end, String type) {
+	public final float inOutBounce(float inputCt, float start, float end, String type) {
 		float ex = this.expIntensity;
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);

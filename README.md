@@ -1,6 +1,19 @@
 # EasyEase
 
-### A collection of Functions to help calculate Easing curve and non linear distribution
+### A collection of utility Functions for Easing motions and non linear distribution
+
+
+The library provides a collection of function to help calculate the most common Easing Curves 
+- Exponential
+- Sinusoidal
+- Circular
+- Back
+- Bounce
+- Elastic
+
+### Approach:
+
+
 
 
 ### TestedPlatforms:
@@ -15,7 +28,8 @@
 none
 
 ### Examples
-A list of examples that demonstrate the use and potential of the library.
+Thislist of examples demonstrates the use and potential of the library.
+The user is warmly welcome to experiment and explore
 
 
 Automated
@@ -90,4 +104,11 @@ Last update: Januar 2024
 
 ### Download
 A link to a zip file that includes the library, documentation and examples.
---->here
+--->[here]("")
+
+### Disclamer
+
+at the moment this library is still in Beta version.
+it might still came out to bugs and unexpected behaviors
+
+Any suggestion of improvement  is highly welcome and can be posted --->[here]("")
