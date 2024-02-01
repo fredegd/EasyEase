@@ -73,6 +73,10 @@ The user is warmly welcome to experiment and explore
 
 
 Automated
+Automated/single/automated_start_stop
+Automated/single/automated_start_stop_alternate
+Automated/single/automated_start_stop_loop
+Automated/single/automated_start_stop_once
 Comparison_distribution
 Comparison_distribution/BACK/Ease_inBack
 Comparison_distribution/BACK/Ease_inOutBack
@@ -92,6 +96,8 @@ Comparison_distribution/EXPO/Ease_out
 Comparison_distribution/SINE/Ease_inOutSine
 Comparison_distribution/SINE/Ease_inSine
 Comparison_distribution/SINE/Ease_outSine
+
+
 Comparison_motion
 Comparison_motion/BACK/Ease_inBack
 Comparison_motion/BACK/Ease_inOutBack
@@ -111,7 +117,18 @@ Comparison_motion/EXPO/Ease_out
 Comparison_motion/SINE/Ease_inOutSine
 Comparison_motion/SINE/Ease_inSine
 Comparison_motion/SINE/Ease_outSine
+
+
 Controlled
+Controlled/default_0_totalLength/controlled_alternate
+Controlled/default_0_totalLength/controlled_loop
+Controlled/default_0_totalLength/controlled_once
+Controlled/with_start_and_stop/controlled_start_stop
+Controlled/with_start_and_stop/controlled_start_stop_alternate
+Controlled/with_start_and_stop/controlled_start_stop_loop
+Controlled/with_start_and_stop/controlled_start_stop_once
+
+
 Motion_Curves
 Motion_Curves/BACK/Ease_inBack
 Motion_Curves/BACK/Ease_inOutBack
@@ -131,8 +148,8 @@ Motion_Curves/EXPO/Ease_out
 Motion_Curves/SINE/Ease_inOutSine
 Motion_Curves/SINE/Ease_inSine
 Motion_Curves/SINE/Ease_outSine
-comparison
-comparison/BACK/Ease_inOutBack
+
+various_examples
 
 
 ### Source: https://github.com/fredegd/EasyEase-Processing-Library
