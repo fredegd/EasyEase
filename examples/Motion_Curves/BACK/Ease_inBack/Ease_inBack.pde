@@ -1,3 +1,15 @@
+  /**
+ * EasyEase
+ * A collection of easing function for Processing.
+ * https://github.com/fredegd/EasyEase-Processing-Library
+ *
+ * Example: Motion_curves  - Ease_inBack
+ *
+ * Display a motion following the selected curve function.
+ * 
+ * @author      Fred Egidi  https://fredegd.dev/
+ */
+
 import easy.ease.*;
 EasyEase curve;
 float iStep = 1.0/60.0;

@@ -210,7 +210,7 @@ public class EasingMethods {
 	 * @return The converted frameCount value .
 	 */
 	public float framer(float input) {
-		return (float) (input / this.motionFrameRate);
+		return (input / this.motionFrameRate);
 	}
 
 	/**

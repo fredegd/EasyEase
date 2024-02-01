@@ -1,4 +1,21 @@
-import easy.ease.*;
+/**
+ * EasyEase
+ * A collection of easing function for Processing.
+ * https://github.com/fredegd/EasyEase-Processing-Library
+ *
+ * Example: GRID
+ * 
+ * This sketch demonstrate how to control an object´s
+ * motion with the mouse
+ *
+ * each time the mouse is being clicked, the mouseX mouseY pos
+ * are set as the motion target
+ * 
+ * 
+ * @author      Fred Egidi  https://fredegd.dev/
+ */
+ 
+ import easy.ease.*;
 EasyEase xMove;
 EasyEase yMove;
 

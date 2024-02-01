@@ -1,4 +1,18 @@
-import easy.ease.*;
+/**
+ * EasyEase
+ * A collection of easing function for Processing.
+ * https://github.com/fredegd/EasyEase-Processing-Library
+ *
+ * Example: GRID
+ * 
+ * This sketch demonstrate how to combine 
+ * differerent motions 
+ *
+ * 
+ * 
+ * @author      Fred Egidi  https://fredegd.dev/
+ */
+ import easy.ease.*;
 String[] words = {"SHAKE", "ROTATE", "SHAKE", "ROTATE", "SHAKE", "ROTATE", "SHAKE", "ROTATE"};
 float ts = 900/words.length;
 EasyEase colorChange;
@@ -33,7 +47,7 @@ void draw() {
       //a variable for the shake
       float mover =      txtAni[j].inOutElastic(counter, 0, width-wordwidth, "alternate");
       //a variable for the rotation
-      float rotor =      txtAni[j].inOut(counter * (60/words.length)/words[j].length(), 0, TAU, "");
+      float rotor =      txtAni[j].outBack(counter * (60/words.length)/words[j].length(), 0, TAU, "");
 
       push();
       if (words[j]!="ROTATE") {

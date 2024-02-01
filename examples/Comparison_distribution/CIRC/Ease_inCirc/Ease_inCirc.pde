@@ -1,3 +1,15 @@
+ /**
+ * EasyEase
+ * A collection of easing function for Processing.
+ * https://github.com/fredegd/EasyEase-Processing-Library
+ *
+ * Example: Comparison_distribution Ease_inCirc
+ *
+ * Comparing the result of the easing distribution VS a linear distribution
+ * 
+ * @author      Fred Egidi  https://fredegd.dev/
+ */
+
 import easy.ease.*;
 EasyEase curve;
 

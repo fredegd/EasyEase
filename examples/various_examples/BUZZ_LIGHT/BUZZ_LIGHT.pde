@@ -1,3 +1,19 @@
+/**
+ * EasyEase
+ * A collection of easing function for Processing.
+ * https://github.com/fredegd/EasyEase-Processing-Library
+ *
+ * Example: BUZZ_LIGHT
+ * 
+ * recreates the effect of a buzzing light using 
+ * the inOutBounce easing method
+ * 
+ * the result motion cummutes back and forth 
+ * from the  start to the stop value.
+ * 
+ * @author      Fred Egidi  https://fredegd.dev/
+ */
+ 
 import easy.ease.*;
 float col;
 EasyEase colorChange;
@@ -11,7 +27,7 @@ void setup() {
 }
 
 void draw() {
-  col = colorChange.inOutBounce(0, 255,"loop");
+  col = colorChange.inOutBounce(0, 255,"alternate");
   background(col);
   translate(width * 0.15, height * 0.15);
   scale(0.7);

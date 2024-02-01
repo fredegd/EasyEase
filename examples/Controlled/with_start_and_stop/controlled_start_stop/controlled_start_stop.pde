@@ -1,3 +1,16 @@
+ /**
+ * EasyEase
+ * A collection of easing function for Processing.
+ * https://github.com/fredegd/EasyEase-Processing-Library
+ *
+ * Example: controlled start_stop
+ * 
+ * automate the motion from the  start 
+ * to the stop value. taking a conter as a motion controller
+ * 
+ * @author      Fred Egidi  https://fredegd.dev/
+ */
+
 import easy.ease.*;
 EasyEase mover;
 float intensity = 3.0;

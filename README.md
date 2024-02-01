@@ -44,6 +44,9 @@ mover = new EasyEase(this);
 
 ### Easing Methods
 
+here is an example of all the easing methods and all their different variants
+
+
 - EXPONENTIAL
 
 
@@ -147,5 +150,10 @@ A link to a zip file that includes the library, documentation and examples.
 
 at the moment this library is still in Beta version.
 it might still came out to bugs and unexpected behaviors
-
 Any suggestion of improvement  is highly welcome and can be posted --->[here]("")
+
+### Troubleshooting
+
+
+If you're having trouble, have a look at the [Processing Wiki](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library) for more information, or contact the author [Fred Egidi](https://github.com/fredegd).
+

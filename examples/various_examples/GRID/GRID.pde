@@ -1,3 +1,24 @@
+/**
+ * EasyEase
+ * A collection of easing function for Processing.
+ * https://github.com/fredegd/EasyEase-Processing-Library
+ *
+ * Example: GRID
+ * 
+ * This sketch demonstrate how to initialize an array of 
+ * EasyEase Objects passing totalLength, animationSpan, delayMap
+ * as parameters
+ *
+ * since each element receives a different delay value,
+ * when placed in a grid, for example it produces  very
+ * interesting motion effect
+ * 
+ * the result motion cummutes back and forth 
+ * from the  start to the stop value.
+ * 
+ * @author      Fred Egidi  https://fredegd.dev/
+ */
+ 
 import easy.ease.*;
 EasyEase[] easyease;
 
