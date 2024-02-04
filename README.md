@@ -161,13 +161,13 @@ Last update: Januar 2024
 
 ### Download
 A link to a zip file that includes the library, documentation and examples.
---->[here]("")
+--->[here]("https://fredegd.github.io/EasyEase-WP/")
 
 ### Disclamer
 
 at the moment this library is still in Beta version.
 it might still came out to bugs and unexpected behaviors
-Any suggestion of improvement  is highly welcome and can be posted --->[here]("")
+Any suggestion of improvement  is highly welcome and can be posted --->[here]("https://github.com/fredegd/EasyEase-Processing-Library/issues")
 
 ### Troubleshooting
 
