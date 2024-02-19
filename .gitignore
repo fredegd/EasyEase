@@ -3,6 +3,8 @@ tmp
 web
 distribution
 resources
+src/*
+.gitignore
 .github
 .git
 .classpath
