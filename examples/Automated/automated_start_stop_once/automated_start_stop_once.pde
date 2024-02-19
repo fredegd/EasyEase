@@ -2,7 +2,7 @@
  * EasyEase
  * A collection of easing function for Processing.
  *
- * https://github.com/fredegd/EasyEase
+ * https://fredegd.github.io/EasyEase/
  *
  * Example: automated start_stop_once
  *
@@ -15,11 +15,6 @@
  * @author      Fred Egidi  -  https://github.com/fredegd
  *
  */
-
-
-
-
-
 import easy.ease.*;
 EasyEase mover;
 float intensity = 3.0;

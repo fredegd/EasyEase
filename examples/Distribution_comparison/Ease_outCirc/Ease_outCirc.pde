@@ -2,7 +2,7 @@
  * EasyEase
  * A collection of easing function for Processing.
  *
- * https://github.com/fredegd/EasyEase
+ * https://fredegd.github.io/EasyEase/
  *
  * Example: Comparison_distribution Ease_outCirc
  *
