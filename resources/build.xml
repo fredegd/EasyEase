@@ -354,7 +354,7 @@ ${line}
 
 	<!-- parsing the examples folder -->
 	<target name="processExamples">
-		<dirset id="examples.contents" dir="${project.examples}" excludes="*/*" />
+		<dirset id="examples.contents" dir="${project.examples}" />
 		<property name="examples.list" refid="examples.contents" />
 		<foreach list="${examples.list}" target="addExamples" param="exampleDir" delimiter=";">
 		</foreach>

@@ -11,8 +11,9 @@
  *
  * since each element receives a different delay value,
  * when placed in a grid, for example it produces  very
- * interesting motion effect
+ * interesting motion effects
  * 
+ * the "alternate" option ensures
  * the result motion cummutes back and forth 
  * from the  start to the stop value.
  * 

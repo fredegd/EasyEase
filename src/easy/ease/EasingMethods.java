@@ -220,7 +220,7 @@ public class EasingMethods {
 	 */
 	public void setLog(Boolean option) {
 		this.log = option ? true : !option ? false : this.log;
-		String result = option ? "Logs will be shown as desired" : "Setter logs will be no longer displayed";
+		String result = option ? "Logs will be shown as desired" : "";
 		System.out.println(result);
 
 	}
@@ -291,7 +291,7 @@ public class EasingMethods {
 	 * delay.
 	 *
 	 * @param type  The type of motion ("loop", "alternate", or "static").
-	 * @param ct    The current count value.
+	 * @param ct    The reference counter value.
 	 * @param delay The delay for the motion.
 	 * @return The normalized count based on the specified motion type and delay.
 	 */
@@ -302,7 +302,7 @@ public class EasingMethods {
 
 		case "loop-controlled":
 
-			valueToReturn = (ct / this.motionFrameRate - delay) % this.totalLength;
+			valueToReturn = (ct / this.motionFrameRate) % this.totalLength -delay;
 			break;
 
 		case "loop-automated":

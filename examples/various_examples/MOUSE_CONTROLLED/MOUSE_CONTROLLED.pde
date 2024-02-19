@@ -1,37 +1,27 @@
 /**
  * EasyEase
  * A collection of easing function for Processing.
- * https://github.com/fredegd/EasyEase-Processing-Library
+ * https://github.com/fredegd/EasyEase
  *
  * Example: GRID
  * 
  * This sketch demonstrate how to control an object´s
  * motion with the mouse
  *
- * each time the mouse is being clicked, the mouseX mouseY pos
+ * each time the mouse is released, the mouseX mouseY pos
  * are set as the motion target
  * 
  * 
- * @author      Fred Egidi  https://fredegd.dev/
+ * @author      Fred Egidi  https://github.com/fredegd
  */
  
  import easy.ease.*;
 EasyEase xMove;
 EasyEase yMove;
 
-int base ;
-int elements;
-float ts;
-
-float totalLength  =2;
-float animationSpan = 1;
-float delayVal = 0.5;
-float expVal = 14;
-color col;
-
 float startX, startY, targetX, targetY;
-
-Boolean newTarget = false;
+color ptCol;
+Boolean pointerTarget = false;
 void setup() {
   size(900, 900);
   rectMode(CENTER);
@@ -44,7 +34,6 @@ void setup() {
 }
 
 void draw() {
-
   background(0);
   fill(255);
   noStroke();
@@ -56,36 +45,35 @@ void draw() {
 }
 
 void pointer() {
-    if (newTarget) {
-    col = color(255, 255, 255, 100);
+    if (pointerTarget) {
+    ptCol = color(255, 255, 255, 100);
   } else {
-    col = color(255, 255, 255, 0);
+    ptCol = color(255, 255, 255, 0);
   }
-  strokeWeight(5);
-  fill(col);
+  strokeWeight(3);
+  fill(ptCol);
   noStroke();
   ellipse(mouseX, mouseY, 100, 100);
   stroke(#ff0000);
-  line(mouseX-40, mouseY, mouseX+40, mouseY);
-  line(mouseX, mouseY-40, mouseX, mouseY+40);
+  line(mouseX-30, mouseY, mouseX+30, mouseY);
+  line(mouseX, mouseY-30, mouseX, mouseY+30);
 }
 
 void mouseReleased() {
-
-  fill(255);
   xMove.resetCounter();
   yMove.resetCounter();
 
   float tempX =mouseX;
   startX=  targetX;
   targetX =tempX;
+  
   float tempY = mouseY;
   startY=targetY;
   targetY=tempY;
 
-  newTarget = false;
+  pointerTarget = false;
 }
 
 void mousePressed() {
-  newTarget = true;
+  pointerTarget = true;
 }

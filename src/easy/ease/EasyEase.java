@@ -54,7 +54,7 @@ public class EasyEase {
 	public final static String VERSION = "##library.prettyVersion##";
 
 	/**
-	 * 1st Constructor Constructs an instance of the EasyEase class with specified
+	 * 4th Constructor Constructs an instance of the EasyEase class with specified
 	 * parameter including the global frameRate.
 	 * 
 	 * @param theSketch    The parent PApplet.
@@ -71,7 +71,7 @@ public class EasyEase {
 	}
 
 	/**
-	 * 2nd Constructor Constructs an instance of the EasyEase class with specified
+	 * 3rd Constructor Constructs an instance of the EasyEase class with specified
 	 * parameters.
 	 * 
 	 * @param theSketch    The parent PApplet.
@@ -86,7 +86,7 @@ public class EasyEase {
 	}
 
 	/**
-	 * 3rd Constructor Constructs an instance of the EasyEase class with a specified
+	 * 2nd Constructor Constructs an instance of the EasyEase class with a specified
 	 * exponent/intensity value.
 	 * 
 	 * @param theSketch    The parent PApplet.
@@ -99,7 +99,7 @@ public class EasyEase {
 	}
 
 	/**
-	 * 4th Constructor Constructs an instance of the EasyEase class with default
+	 * 1st Constructor Constructs an instance of the EasyEase class with default
 	 * parameters.
 	 * 
 	 * @param theSketch The parent PApplet.

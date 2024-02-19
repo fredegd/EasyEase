@@ -1,8 +1,8 @@
 # EasyEase library for Processing
 
+![Demo](promo.gif)
+
 ### A collection of utility Functions for Easing motions and non linear distribution
-
-
 The library provides a collection of function to help calculate the most common Easing Curves 
 - Exponential
 - Sinusoidal

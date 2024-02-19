@@ -1,7 +1,7 @@
 /**
  * EasyEase
  * A collection of easing function for Processing.
- * https://github.com/fredegd/EasyEase-Processing-Library
+ * https://github.com/fredegd/EasyEase
  *
  * Example: BUZZ_LIGHT
  * 
@@ -11,9 +11,9 @@
  * the result motion cummutes back and forth 
  * from the  start to the stop value.
  * 
- * @author      Fred Egidi  https://fredegd.dev/
+ * @author      Fred Egidi  -  https://github.com/fredegd
+ * 
  */
- 
 import easy.ease.*;
 float col;
 EasyEase colorChange;
@@ -23,7 +23,7 @@ void setup() {
   rectMode(CENTER);
   textAlign(CENTER, CENTER);
   textSize(100);
-  colorChange = new EasyEase(this,1, 4,2,1);
+  colorChange = new EasyEase(this,1, 2,1,0.5);
 }
 
 void draw() {
@@ -35,6 +35,5 @@ void draw() {
   noStroke();
   rect(width/2,height/2,width,height);
   fill(col);
-
   text("BUZZ LIGHT", width/2, height/2+col/25);
 }
