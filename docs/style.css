@@ -1,0 +1,58 @@
+.exampleWindow {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 7px;
+  margin: 3rem 0;
+  padding: 0;
+  background-color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.exampleWindow > p {
+  display: flex;
+  margin: 0;
+}
+.exampleWindow > p > img {
+  border-radius: 0 0 7px 7px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px 0 0;
+  border-radius: 50%;
+  background: #f9f9f9;
+  border: 1px solid #f9f9f9;
+
+  &.red {
+    background: #ff6057;
+    border-color: #e14640;
+  }
+
+  &.amber {
+    background: #ffbd2e;
+    border-color: #dfa123;
+  }
+
+  &.green {
+    background: #27c93f;
+    border-color: #1dad2b;
+  }
+}
+.title {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.title > p {
+  flex-grow: 2;
+  font-size: 1.125em;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin: 0 0 0 -40px;
+}
