@@ -5,6 +5,8 @@ lib
 distribution
 resources
 src/*
+.metadata
+.gitignore
 .github
 .git
 .classpath
