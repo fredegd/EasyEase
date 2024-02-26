@@ -106,7 +106,7 @@ public class EasyEase {
 	 */
 	public EasyEase(PApplet theSketch) {
 		init(theSketch);
-		generator = new EasingMethods(this.expIntensity, this.totalLength, this.span, this.delay, this.motionFrameRate);
+		generator = new EasingMethods(1f, this.totalLength, this.span, this.delay, this.motionFrameRate);
 
 	}
 
@@ -287,6 +287,89 @@ public class EasyEase {
 	//
 	//
 	//
+/////////////////////////////
+/////////// IN - EXPO
+//
+// controlled counter
+////////////////////////////////////////////////////////////////////////////////////////////
+	/**
+	 * returns a linear value between start and end
+	 *
+	 * @param inputCt the input progress, a value between 0 and totalLength
+	 * @return The eased value.
+	 */
+	public float linear(float inputCt) {
+		return generator.linear(inputCt, defaultStart, defaultEnd, "loop-controlled");
+	}
+
+	/**
+	 * returns a linear value between start and end.
+	 *
+	 * @param inputCt the input progress, a value between 0 and totalLength
+	 * @param type    The easing type.
+	 * @return The eased value.
+	 */
+	public float linear(float inputCt, String type) {
+		String check = type == "loop" ? "loop-controlled"
+				: type == "alternate" ? "alternate-controlled" : type == "once" ? "one-repetition-controlled" : "";
+		return generator.linear(inputCt, defaultStart, defaultEnd, check);
+
+	}
+
+	/**
+	 * returns a linear value between start and end
+	 *
+	 * @param inputCt the input progress, a value between 0 and totalLength
+	 * @param start   The starting value.
+	 * @param end     The ending value.
+	 * @return The eased value.
+	 */
+	public float linear(float inputCt, float start, float end) {
+		return generator.linear(inputCt, start, end, "loop-controlled");
+	}
+
+	/**
+	 * returns a linear value between start and end with a specified type.
+	 *
+	 * @param inputCt the input progress, a value between 0 and totalLength
+	 * @param start   The starting value.
+	 * @param end     The ending value.
+	 * @param type    The looping options.
+	 * @return The eased value.
+	 */
+	public float linear(float inputCt, float start, float end, String type) {
+		String check = type == "loop" ? "loop-controlled"
+				: type == "alternate" ? "alternate-controlled" : type == "once" ? "one-repetition-controlled" : "";
+		return generator.linear(inputCt, start, end, check);
+	}
+// automated counter
+////////////////////////////////////////////////////////////////////////////////////////////
+
+	/**
+	 * returns a linear value between start and end.
+	 *
+	 * @param start The starting value.
+	 * @param end   The ending value.
+	 * @return The eased value.
+	 */
+	public float linear(float start, float end) {
+		return generator.linear(defaultCountStart, start, end, "loop-automated");
+	}
+
+	/**
+	 * returns a linear value between start and end with a specified type.
+	 *
+	 * @param start The starting value.
+	 * @param end   The ending value.
+	 * @param type  The looping options.
+	 * @return The eased value.
+	 */
+	public float linear(float start, float end, String type) {
+		String check = type == "loop" ? "loop-automated"
+				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
+		return generator.linear(defaultCountStart, start, end, check);
+	}
+
 	/////////////////////////////
 	/////////// IN - EXPO
 	//

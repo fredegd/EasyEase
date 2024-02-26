@@ -12,27 +12,21 @@
  */
 
 
-
 import easy.ease.*;
-EasyEase curve;
-float iStep = 1.0/60.0;
-float intensity =2;
-float totalLength = 1;
+float step = 1/60.0 ;
+EasyEase curve = new EasyEase(this);
 void setup() {
-
   size(600, 600);
-  rectMode(CENTER);
-  curve = new EasyEase(this, intensity);
-  //set the total lenght of the motion, (in seconds)
-  curve.setTotalLength(totalLength);
+  //set the curve's exponential intensity
+  curve.setIntensity(1);
 }
 void draw() {
   float start = 50;
   float stop = width-50;
-  
-  float linearCounter = curve.framer(frameCount)%totalLength;
-  float pointerX= map(linearCounter, 0, totalLength, start, stop);
-  float pointerY= curve.inCirc(start, stop);
+
+  float counter = curve.framer(frameCount);
+  float pointerX=  curve.linear(counter, start, stop);
+  float pointerY= curve.inCirc(counter, start, stop);
 
   background(0);
   fill(#ff0000);
@@ -41,8 +35,8 @@ void draw() {
   stroke(255);
   strokeWeight(5);
   beginShape();
-  for (float i = 0; i<totalLength; i+= iStep) {
-    float x= map(i, 0, totalLength, start, stop);
+  for (float i = 0; i<1; i+= step) {
+    float x= curve.linear(i, start, stop);
     float y = curve.inCirc(i, start, stop);
     vertex(x, y);
   }

@@ -81,6 +81,9 @@ public class EasingMethods {
 	 */
 	public void setIntensity(float expVal) {
 		this.expIntensity = expVal;
+		this.c1 = this.expIntensity;
+		this.c2 = (float) (this.c1 * 1.5);
+		this.c3 = this.c1 + 1;
 		if (this.log)
 			System.out.println("Curve intensity set to " + this.expIntensity);
 	}
@@ -210,7 +213,8 @@ public class EasingMethods {
 	 * @return The converted frameCount value .
 	 */
 	public float framer(float input) {
-		return (input / this.motionFrameRate);
+
+		return input==0?0f: ((input-1) / this.motionFrameRate);
 	}
 
 	/**
@@ -271,18 +275,19 @@ public class EasingMethods {
 		return start2 + (value - start1) * (stop2 - start2) / (stop1 - start1);
 	}
 
-	// saw-tooth-wave
+	// Triangle-wave
 	/**
-	 * Generates a sawtooth wave and returns linear values between 0 and 1 based on
-	 * the provided time.
+	 * Generates a Triangle wave and returns linear values between 0 and 1 based on
+	 * the provided time. (info about Triangle wave
+	 * https://en.wikipedia.org/wiki/Triangle_wave )
 	 *
 	 * @param time The time value.
-	 * @return The value of the sawtooth wave.
+	 * @return The value of the Triangle wave.
 	 */
-	public static float sawWave(float time) {
+	public static float triWave(float time) {
 		float phase = (time % 1);
-		float saw = (phase <= 0.5 ? phase : 1 - phase) * 2;
-		return saw * 0.9999f;
+		float tri = (phase <= 0.5 ? phase : 1 - phase) * 2;
+		return tri * 0.9999f;
 	}
 
 	// counter
@@ -302,11 +307,11 @@ public class EasingMethods {
 
 		case "loop-controlled":
 
-			valueToReturn = (ct / this.motionFrameRate) % this.totalLength -delay;
+			valueToReturn = (ct / this.motionFrameRate) % this.totalLength - delay;
 			break;
 
 		case "loop-automated":
-			
+
 			if (this.count >= ((this.totalLength) * this.motionFrameRate) - this.step) {
 				this.count = 0f;
 			}
@@ -315,14 +320,14 @@ public class EasingMethods {
 			break;
 		////// what about the delay here?
 		case "alternate-controlled":
-			valueToReturn = (sawWave((ct / (this.motionFrameRate * 2)) / (this.totalLength)) * this.totalLength - delay)
+			valueToReturn = (triWave((ct / (this.motionFrameRate * 2)) / (this.totalLength)) * this.totalLength - delay)
 					% this.totalLength;
 			break;
 		////// what about the delay here?
 
 		case "alternate-automated":
-			
-			valueToReturn = (sawWave((this.count / this.motionFrameRate) / (2 * this.totalLength)) * this.totalLength
+
+			valueToReturn = (triWave((this.count / this.motionFrameRate) / (2 * this.totalLength)) * this.totalLength
 					- delay) % this.totalLength;
 			this.count += (this.step * this.motionFrameRate);
 			break;
@@ -333,7 +338,6 @@ public class EasingMethods {
 			break;
 
 		case "one-repetition-automated":
-			
 
 			if (this.count >= ((this.totalLength) * this.motionFrameRate)) {
 				this.count = this.totalLength * this.motionFrameRate;
@@ -351,6 +355,31 @@ public class EasingMethods {
 
 	}
 
+	//
+	//
+	//
+	/////////////////////////////
+	///////////LINEAR OUTPUT
+	////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////
+
+	/**
+	 * returns a linear output based on a linear input
+	 *
+	 * @param inputCt The input value between 0 and 1, represents the progress of
+	 *                the motion.
+	 * @param start   The start value.
+	 * @param end     The end value.
+	 * @param type    Which kind of motion
+	 * @return The eased progress between start and end.
+	 */
+	public final float linear(float inputCt, float start, float end, String type) {
+
+		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
+		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
+		return (float) (start + progress * (end - start));
+	}
 	///////////////////////////////////////////////////
 	// Easing Methods
 	///////////////////////////////////////////////////
@@ -453,11 +482,9 @@ public class EasingMethods {
 	 * @return The eased progress between start and end.
 	 */
 	public final float inSine(float inputCt, float start, float end, String type) {
-		float ex = Math.abs(this.expIntensity) >= 1 ? reMap(this.expIntensity, 1f, 20f, 1f, 4f)
-				: Math.abs(this.expIntensity);
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
-		return (float) (start + (1 - Math.cos(progress * Math.PI * 0.5 * ex)) * (end - start));
+		return (float) (start + (1 - Math.cos(progress * Math.PI * 0.5 )) * (end - start));
 	}
 
 	//
@@ -479,11 +506,9 @@ public class EasingMethods {
 	 * @return The eased progress between start and end.
 	 */
 	public final float outSine(float inputCt, float start, float end, String type) {
-		float ex = Math.abs(this.expIntensity) >= 1 ? reMap(this.expIntensity, 1f, 20f, 1f, 4f)
-				: Math.abs(this.expIntensity);
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
-		return (float) (start + Math.sin(progress * Math.PI * 0.5 * ex) * (end - start));
+		return (float) (start + Math.sin(progress * Math.PI * 0.5 ) * (end - start));
 
 	}
 
@@ -506,11 +531,9 @@ public class EasingMethods {
 	 * @return The eased progress between start and end.
 	 */
 	public final float inOutSine(float inputCt, float start, float end, String type) {
-		float ex = Math.abs(this.expIntensity) >= 1 ? reMap(this.expIntensity, 1f, 20f, 1f, 4f)
-				: Math.abs(this.expIntensity);
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
-		return (float) (start + ((1 - Math.cos(progress * Math.PI * ex)) / 2) * (end - start));
+		return (float) (start + ((1 - Math.cos(progress * Math.PI)) / 2) * (end - start));
 
 	}
 
