@@ -306,12 +306,12 @@ public class EasingMethods {
 			break;
 
 		case "loop-automated":
-			this.count += (this.step * this.motionFrameRate);
+			
 			if (this.count >= ((this.totalLength) * this.motionFrameRate) - this.step) {
 				this.count = 0f;
 			}
 			valueToReturn = (this.count / this.motionFrameRate - delay);
-
+			this.count += (this.step * this.motionFrameRate);
 			break;
 		////// what about the delay here?
 		case "alternate-controlled":
@@ -321,10 +321,10 @@ public class EasingMethods {
 		////// what about the delay here?
 
 		case "alternate-automated":
-			this.count += (this.step * this.motionFrameRate);
+			
 			valueToReturn = (sawWave((this.count / this.motionFrameRate) / (2 * this.totalLength)) * this.totalLength
 					- delay) % this.totalLength;
-
+			this.count += (this.step * this.motionFrameRate);
 			break;
 
 		case "one-repetition-controlled":
@@ -333,13 +333,13 @@ public class EasingMethods {
 			break;
 
 		case "one-repetition-automated":
-			this.count += (step * this.motionFrameRate);
+			
 
 			if (this.count >= ((this.totalLength) * this.motionFrameRate)) {
 				this.count = this.totalLength * this.motionFrameRate;
 			}
 			valueToReturn = Math.min((this.count / this.motionFrameRate - delay), this.totalLength);
-
+			this.count += (step * this.motionFrameRate);
 			break;
 
 		default:

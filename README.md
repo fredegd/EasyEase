@@ -43,7 +43,7 @@ The esiest apporoach to get started with EasyEase in Processing is:
 
 
 ```sketch.pde
-import easy.ease.*
+import easy.ease.*;
 
 EasyEase mover;
 ```
@@ -51,22 +51,23 @@ EasyEase mover;
 - in setup() declare the EasyEase object initialized before
 
 ```sketch.pde
-setup(){
-size(600, 600);
+void setup(){
+size(600, 400);
 mover = new EasyEase(this);
+mover.setIntensity(3);
 }
 ```
 
-- in the draw() an practical and convenient way to access the object´s build in easing
+- in the draw() a practical and convenient way to access the object´s build in easing
   is to call the desired Easing method, and pass in a `counter`value (default between 0 and 1), a `start` value and an `end` value as parameters like in the example:
 
 ```sketch.pde
 void draw(){
-  float start = 50;
-  float stop = width-50;
-  float x = mover.out(counter,start, stop);
-
-  ellipse(x,height/2,100,100);
+  float start = 0;
+  float stop = width * 0.9;
+  float x = mover.out(start, stop);
+  fill(255, 0, 0);
+  rect(x, 0, width * 0.1, height);
 }
 ```
 
