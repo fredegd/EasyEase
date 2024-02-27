@@ -17,7 +17,7 @@ public class EasyEase {
 	/**
 	 * @see EasingMethods generator an instance of the easing methods Class
 	 */
-	public EasingMethods generator;
+	private EasingMethods generator;
 	/**
 	 * @see motionFrameRate The default frame rate value for motion calculations
 	 */
@@ -52,23 +52,6 @@ public class EasyEase {
 	 * @version VERSION the current version of this library
 	 */
 	public final static String VERSION = "##library.prettyVersion##";
-
-	/**
-	 * 4th Constructor Constructs an instance of the EasyEase class with specified
-	 * parameter including the global frameRate.
-	 * 
-	 * @param theSketch    The parent PApplet.
-	 * @param expIntensity The intensity/exponent value of the easing curve.
-	 * @param totalLength  The maximum and total length of the easing motion
-	 * @param span         The span of the easing motion.
-	 * @param delay        The delay before the easing motion starts.
-	 * @param frameRate    The frame rate, when used for motions
-	 */
-	public EasyEase(PApplet theSketch, float expIntensity, float totalLength, float span, float delay,
-			float frameRate) {
-		init(theSketch);
-		generator = new EasingMethods(expIntensity, totalLength, span, delay, frameRate);
-	}
 
 	/**
 	 * 3rd Constructor Constructs an instance of the EasyEase class with specified

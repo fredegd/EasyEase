@@ -2,13 +2,13 @@
 
 The EasyEase Class can be initialized in different ways, enhancing flexibility and customization
 
-There are 4 different constructor functions  each of them initializes an instances of the Class according to the provided global arguments 
+There are 3 different constructor functions  each of them initializes an instances of the Class according to the provided arguments 
 
-## 1. Constructor
+# Constructor #1 - default constructor
 
-Constructs an instance of the EasyEase Class expecting only ```this```, reference to the current Sketch,  as a argument.
+Constructs an instance of the EasyEase Class expecting only ```this```, a reference to the current Sketch,  as a argument.
 
-It assigns default values for the global [parameters](#parameters) like ```intesity```, ```totalLength```, ```curveSpan```, ```delay``` and ```frameRate```.
+It assigns default values for the global [parameters](./globalParameters.md) like ```intesity```, ```totalLength```, ```curveSpan```, ```delay``` and ```frameRate```.
 
 
 ### Example:
@@ -73,7 +73,7 @@ Object
 <br>
 
 
-## 2. Constructor
+# Constructor #2 -  with exponential intensity
 
 Constructs an instance of the EasyEase Class expecting
 
@@ -82,7 +82,7 @@ Constructs an instance of the EasyEase Class expecting
 
 as arguments.
 
-It assigns default values for other global [parameters](#parameters) ```intesity```, ```totalLength```, ```curveSpan```, ```delay``` and ```frameRate```.
+It assigns default values for other global [parameters](./globalParameters.md) ```intesity```, ```totalLength```, ```curveSpan```, ```delay``` and ```frameRate```.
 
 
 ### Example:
@@ -150,7 +150,7 @@ Object
 <br>
 
 
-## 3. Constructor
+# Constructor #3  -  with exponential intensity and time related parameters
 
 Constructs an instance of the EasyEase Class expecting 
 - ```this``` as a reference to the current sketch,
@@ -161,7 +161,7 @@ Constructs an instance of the EasyEase Class expecting
 
  as arguments.
 
- It assigns the  default value for the global [parameter](#parameters) ```frameRate```.
+ It assigns the  default value for the global [parameter](./globalParameters.md) ```frameRate```.
 
 
 ### Example:
@@ -222,69 +222,13 @@ EasyEase curve = new EasyEase(this, intensity, totalLength, curveSpan, delay);
 
 **```intensity```** (float) The intensity / exponential value of the easing curve.
 
+**```totalLength```** (float) The  total length (in seconds) of the interpolation / motion
+
+**```curveSpan```** (float) The span (in seconds) of the easing curve.
+
+**```delay```** (float) the delay (in seconds) before the curve starts bending
+
 ### Returns
 
 Object
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-## 4. Constructor
-
-Constructs an instance of the EasyEase Class expecting 
-- ```this``` as a reference to the current sketch,
-- a ```float``` value for the ```intensity``` ,
--  a  ```float``` value for the ```totalLength``` ,
--  a  ```float``` value for the ```curveSpan``` ,
--  a  ```float``` value for the ```delay```,
-- a ```float``` value for the motion ```frameRate```
- as arguments.
-
-
-### Example:
-
-```java
-import easy.ease.*;
-
-// construct an instance of the EaseEase Class called curve
-// passing "this" as a reference to the current sketch
-// and float values for the intensity, totalLength, 
-// curveSpan and delay
-
-float intensity = 4.3;  // the exponential value of the curve
-float totalLength = 1; // the total length of the interpolation
-float curveSpan = 0.6; // the span of the easing curve
-float delay = 0.4; // the delay before the curve starts bending 
-EasyEase curve = new EasyEase(this, intensity, totalLength, curveSpan, delay);
-
-void setup() {
-  size(600, 400);
-loadPixels();
-  for (float x = 0; x < width; x++) {
-    for (float y = 0; y < height; y++) {
-      int index = int(x + y * width);
-      color c = color(curve.out( (x / width+ 0*frameCount/60.0)%1)*255);
-      pixels[index] = c;
-    }
-  }
-  updatePixels();
-}
-
-```
-
-<div class="exampleWindow">
-  <div class="title">
-      <div class="dot red"></div>
-      <div class="dot amber"></div>
-      <div class="dot green"></div>
-        <p >4th_Constructor.pde</p>
-  </div>
-
-![.inOutSine()](../images/4th_Constructor.jpg)
-
-</div>
 
