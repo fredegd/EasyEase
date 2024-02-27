@@ -5,24 +5,72 @@ Easing Function and non linear distribution utilities
 
 ### What is that useful for?
 
-EasyEase  provides a ready-to-go setup to easily apply [easing curves](#easing-curves) to spatial distribution or an animation, donating more natural  and visually appealing effects.
-
+EasyEase provides a ready-to-use setup for effortlessly applying [easing curves](#easing-curves) to a spatial distribution or an animations, resulting in more natural and visually appealing effects.
 
 ### Easing curves
 
-the library provides flexible functional method for each of the following easing curves
+The library offers flexible functional methods for each of the following easing curves:
+
+- Exponential
+- Sinusoidal
+- Circular
+- Back
+- Bounce
+- Elastic
+
 
 <div class="table">
+<table>
+  <thead>
+    <tr>
+      <th>curve type</th>
+      <th>ease-in</th>
+      <th>ease-out</th>
+      <th>ease-in-out</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Exponential</td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_in.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_in.png" alt="Demo"></div></td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_out.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_out.png" alt="Demo"></div></td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_inOut.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_inOut.png" alt="Demo"></div></td>
+    </tr>
+    <tr>
+      <td>Sinusoidal</td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_inSine.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_inSine.png" alt="Demo"></div></td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_outSine.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_outSine.png" alt="Demo"></div></td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_inOutSine.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_inOutSine.png" alt="Demo"></div></td>
+    </tr>
+    <tr>
+      <td>Circular</td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_inCirc.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_inCirc.png" alt="Demo"></div></td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_outCirc.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_outCirc.png" alt="Demo"></div></td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_inOutCirc.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_inOutCirc.png" alt="Demo"></div></td>
+    </tr>
+    <tr>
+      <td>Back</td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_inBack.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_inBack.png" alt="Demo"></div></td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_outBack.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_outBack.png" alt="Demo"></div></td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_inOutBack.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_inOutBack.png" alt="Demo"></div></td>
+    </tr>
+    <tr>
+      <td>Bounce</td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_inBounce.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_inBounce.png" alt="Demo"></div></td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_outBounce.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_outBounce.png" alt="Demo"></div></td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_inOutBounce.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_inOutBounce.png" alt="Demo"></div></td>
+    </tr>
+    <tr>
+      <td>Elastic</td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_inElastic.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_inElastic.png" alt="Demo"></div></td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_outElastic.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_outElastic.png" alt="Demo"></div></td>
+      <td><div class="gifImg"><img src="./images/curve/Ease_inOutElastic.gif" alt="Demo"></div><div class="fixImg"><img src="./images/curve/Ease_inOutElastic.png" alt="Demo"></div></td>
+    </tr>
 
-| curve type | ease-in | ease-out |ease-in-out |
-| ---------- |----|----|----|
-| Exponential  | <div class="gifImg">![Demo](./images/curve/Ease_in.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_in.png)</div> | <div class="gifImg">![Demo](./images/curve/Ease_out.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_out.png)</div> | <div class="gifImg">![Demo](./images/curve/Ease_inOut.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_inOut.png)</div> |
-| Sinusoidal   | <div class="gifImg">![Demo](./images/curve/Ease_inSine.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_inSine.png)</div> | <div class="gifImg">![Demo](./images/curve/Ease_outSine.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_outSine.png)</div> | <div class="gifImg">![Demo](./images/curve/Ease_inOutSine.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_inOutSine.png)</div> |
-| Circular  | <div class="gifImg">![Demo](./images/curve/Ease_inCirc.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_inCirc.png)</div> | <div class="gifImg">![Demo](./images/curve/Ease_outCirc.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_outCirc.png)</div> | <div class="gifImg">![Demo](./images/curve/Ease_inOutCirc.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_inOutCirc.png)</div> |
-| Back  | <div class="gifImg">![Demo](./images/curve/Ease_inBack.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_inBack.png)</div> | <div class="gifImg">![Demo](./images/curve/Ease_outBack.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_outBack.png)</div> | <div class="gifImg">![Demo](./images/curve/Ease_inOutBack.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_inOutBack.png)</div>|
-| Bounce   | <div class="gifImg">![Demo](./images/curve/Ease_inBounce.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_inBounce.png)</div> | <div class="gifImg">![Demo](./images/curve/Ease_outBounce.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_outBounce.png)</div> | <div class="gifImg">![Demo](./images/curve/Ease_inOutBounce.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_inOutBounce.png)</div> |
-| Elastic   | <div class="gifImg">![Demo](./images/curve/Ease_inElastic.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_inElastic.png)</div> | <div class="gifImg">![Demo](./images/curve/Ease_outElastic.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_outElastic.png)</div> | <div class="gifImg">![Demo](./images/curve/Ease_inOutElastic.gif)</div> <div class="fixImg">![Demo](./images/curve/Ease_inOutElastic.png)</div> |
+  </tbody>
+</table>
 </div>
+
 
 ### Get Started:
 

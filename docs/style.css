@@ -13,6 +13,8 @@
 .exampleWindow > p {
   display: flex;
   margin: 0;
+  border: 1px solid #eaeaea;
+  border-radius: 7px;
 }
 .exampleWindow > p > img {
   border-radius: 0 0 7px 7px;
@@ -57,53 +59,43 @@
   margin: 0 0 0 -40px;
 }
 
-
-.table{
-
-&& td {
-  padding: 0;
-  margin: 0;
-  /* text-align: center;
+.table {
+  && td {
+    padding: 0;
+    margin: 0;
+    /* text-align: center;
   vertical-align: middle; */
 
-
-
-
-  height: 200px;
-  position: relative;
-  overflow: hidden;
-
-}
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
 }
 
-
-.gifImg{
-  position:absolute;
-  opacity:0;
-  /* padding: 1rem; */
-
+.gifImg {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
-.gifImg>img {
-max-height: 200px;
-  margin: 0;
-  padding: 0;
-  } 
-  
-.gifImg:hover{
-  opacity:1;
-
-}
-
-.fixImg{
-  /* padding: 1rem; */
-  opacity:1;
-
-}
-.fixImg:hover{
-  opacity:0;
-}
-.fixImg>img {
+.gifImg > img {
   max-height: 200px;
   margin: 0;
   padding: 0;
-  } 
+}
+
+.gifImg:hover {
+  opacity: 1;
+}
+
+.fixImg {
+  opacity: 1;
+  cursor: pointer;
+}
+.fixImg:hover {
+  opacity: 0;
+}
+.fixImg > img {
+  max-height: 200px;
+  margin: 0;
+  padding: 0;
+}

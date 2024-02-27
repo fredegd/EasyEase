@@ -61,13 +61,14 @@ void draw() {
 
 ### Parameters
 
-**counter** (float): an incremental value between 0 and [totalLength](./totalLength.md)
+**```counter```** (float)  an incremental value between 0 and [totalLength](./totalLength.md)
 
-**start** (float): the lowest desired output value
+**```start```** (float) the lowest desired output value
 
-**stop** (float): the highest desired output value
+**```stop```** (float) the highest desired output value
 
-**option** (String): either **"loop"** , **"alternate"** or **"once"**
+**```option```** (String)  either **```"loop"```** , **```"alternate"```** or **```"once"```**
+
 
 
 ### Return
