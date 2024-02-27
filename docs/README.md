@@ -3,11 +3,11 @@ Easing Function and non linear distribution utilities
 
 ![Demo](./images/promoBanner.gif)
 
-### What is this useful for?
+## What is this useful for?
 
-EasyEase provides a ready-to-use setup for effortlessly applying [easing curves](#easing-curves) to a spatial distribution or an animations, resulting in more natural and visually appealing effects.
-
-### Easing curves
+EasyEase provides a ready-to-use setup for an effortless application of [easing curves](#easing-curves) to a spatial distribution or an animations, resulting in more natural and visually appealing effects.
+<!-- 
+## Easing curves
 
 The library offers flexible functional methods for each of the following easing curves:
 
@@ -69,110 +69,215 @@ The library offers flexible functional methods for each of the following easing 
 
   </tbody>
 </table>
-</div>
+</div> -->
 
 
-### Get Started:
+## Download:
 
-Download [from here](https://github.com/fredegd/EasyEase/releases) the latest release in .zip file
+[here](https://github.com/fredegd/EasyEase/releases) the latest release, including the library, documentation and examples. in **.zip** format
 
-### Installation:
+<br>
+<br>
+<br>
+<br>
+<br>
 
-#### manually install:
+## Installation
 
-Unzip / extract the content of **EasyEase.zip** into your Processing libraries folder.
-
-#### ~~using the library manager~~
-
+### ~~Library manager (not yet available)~~
 ~~Open Processing,~~
 ~~go-to: Sketch > Import Library > Manage Libraries > EasyEase~~
 
-### Docs
 
-Documentation can be found [here](https://fredegd.github.io/EasyEase).
+### Manually install:
 
-### Basic Usage
+- [Download]("https://github.com/fredegd/EasyEase/releases") the latest release of the library.
 
-The esiest apporoach to get started with EasyEase in Processing is:
+- Unzip / extract the content of **EasyEase.zip** into your Processing sketchbook's /libraries folder.
 
-- import the library, and 
-- initialize an instance of EasyEase Class object and give it a name, for example: `mover`
+*note: sketchbook's /libraries folder is usually located under /User/Yourname/Documents/Processing/libraries.
+in order to view or change your sketchbook location go to:
+File > Preferences. 
+The "sketchbook location" setting is the first option of the dialog*
 
 
-```Processing
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## Docs
+
+Documentation can be found at this [link](https://fredegd.github.io/EasyEase).
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Basic Usage
+
+### 1) Import the Library
+
+Once correctly installed, import the library by selecting: Sketch > Import Library > EasyEase.
+or alternatively just type `import easy.ease.*` at the beginning of your sketch.
+
+### 2) Declare and construct objects from the Class EasyEase
+
+An EasyEase object should be declared globally. It may be constructed inside or outside the sketch's `setup()` function
+
+_more information about all different types of constructors: [here](./constructors.md)_
+
+### 3) Access the easing methods
+
+Each EasyEase object contains a set of different easing [methods](./methods.md) as well as several build-in helper functions
+
+### Example:
+
+```java
 import easy.ease.*;
+float intensity = 9.2;
+EasyEase  mover = new EasyEase(this, intensity);
 
-EasyEase mover;
-```
-
-- in setup() declare the EasyEase object initialized before
-
-```Processing
-void setup(){
-size(600, 400);
-mover = new EasyEase(this);
-mover.setIntensity(3);
+void setup() {
+  size(600, 400);
 }
-```
-
-- in the draw() a practical and convenient way to access the object´s build in easing
-  is to call the desired Easing method, and pass in a `counter`value (default between 0 and 1), a `start` value and an `end` value as parameters like in the example:
-
-```Processing
-void draw(){
-  float start = 0;
-  float stop = width * 0.9;
-  float x = mover.out(start, stop);
+void draw() {
+  float start = 100;
+  float stop = 400;
+  float motor = mover.framer(frameCount*0.5);
+  
+  float x = mover.inOut(motor, start, stop);
+  
   fill(255, 0, 0);
-  rect(x, 0, width * 0.1, height);
+  rect(x, (motor%1)*(height-100), 100,100);
 }
 ```
+
 <div class="exampleWindow">
   <div class="title">
       <div class="dot red"></div>
       <div class="dot amber"></div>
       <div class="dot green"></div>
-      <p >basic_usage.pde</p>
+      <p >basicUsage.pde</p>
   </div>
 
-![Demo](./images/basic_usage_00.gif)
+![Basic Usage](images/basic_usage_00.gif)
 
 </div>
 
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
 ### TestedPlatforms:
 
-- OS-X: Yes
-- Windows: ( not tested yet )
-- Linux: (not tested yet)
+- OS-X
+- ~~Windows~~
+- ~~Linux~~
 
+
+<br>
+<br>
+<br>
+<br>
+<br>
 #### Processing:
 
-4.1.1
+**4.1.1** (The latest Processing version the library has been tested with)
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ### Dependencies:
 
-none
+EasyEase depends on no other libraries
 
-### Examples
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## Other Examples:
+
+- 1
+- 2
+- 3
+- 4
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ### Source: https://github.com/fredegd/EasyEase
 
-### Keywords. easing motion easing-curve gradient non-linear curve
 
-Last update: Januar 2024
+<br>
+<br>
+<br>
+<br>
+<br>
 
-### Download
+### This Library was written is in accordance with the [Processing library guidelines](https://github.com/benfry/processing4/wiki/Library-Guidelines)
 
-A link to a zip file that includes the library, documentation and examples.
---->[here](https://github.com/fredegd/EasyEase/releases/)
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+### Keywords:
+
+easing ,  motion,  easing-curve,  gradient,  non-linear,  curve, interpolation
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+### Last update
+
+February 2024
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 ### Issues
 
-unexpected bugs and behaviors or any suggestion of improvement is highly welcome and can be posted --->[here](https://github.com/fredegd/EasyEase/issues)
+Issues, unexpected bugs and behaviors, or any kind of suggestion or improvement is highly welcome and can be posted --->[here](https://github.com/fredegd/EasyEase/issues)<---
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ### Troubleshooting
 
-If you're having trouble, have a look at the [Processing Wiki](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library) for more information, or contact the author [Fred Egidi](https://fredegd.dev).
+If you're having trouble, have a look at the [Processing Wiki](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library) for further information, please contact the author: [Fred Egidi](https://fredegd.dev).

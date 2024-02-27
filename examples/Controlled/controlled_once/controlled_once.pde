@@ -21,6 +21,7 @@ void setup() {
   size(600, 600);
   rectMode(CENTER);
   mover = new EasyEase(this, intensity);
+
 }
 void draw() {
   background(0);

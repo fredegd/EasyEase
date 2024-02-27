@@ -17,7 +17,7 @@ float intensity = 3;
 EasyEase curve = new EasyEase(this, intensity);
 
 void setup() {
-  size(600, 600);
+  size(600, 400);
 }
 
 void draw() {
@@ -40,8 +40,7 @@ void draw() {
       <p >Ease_in_back.pde</p>
   </div>
 
-![.in()](../images/Ease_inBack
-.gif)
+![.in()](../images/Ease_inBack.gif)
 
 </div>
 

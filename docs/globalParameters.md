@@ -30,10 +30,6 @@ values can be passed
 
 **```option```** (String)  either **```"loop"```** , **```"alternate"```** or **```"once"```**
 
-### Returns
-
-Object
-
 
 
 

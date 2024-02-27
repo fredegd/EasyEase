@@ -3,11 +3,11 @@ Easing Function and non linear distribution utilities
 
 ![Demo](./images/promoBanner.gif)
 
-### What is this useful for?
+## What is this useful for?
 
 EasyEase provides a ready-to-use setup for effortlessly applying [easing curves](#easing-curves) to a spatial distribution or an animations, resulting in more natural and visually appealing effects.
 
-### Easing curves
+## Easing curves
 
 The library offers flexible functional methods for each of the following easing curves:
 
@@ -72,11 +72,11 @@ The library offers flexible functional methods for each of the following easing 
 </div>
 
 
-### Get Started:
+## Get Started:
 
 Download [from here](https://github.com/fredegd/EasyEase/releases) the latest release in .zip file
 
-### Installation:
+## Installation:
 
 #### manually install:
 
@@ -87,55 +87,57 @@ Unzip / extract the content of **EasyEase.zip** into your Processing libraries f
 ~~Open Processing,~~
 ~~go-to: Sketch > Import Library > Manage Libraries > EasyEase~~
 
-### Docs
+
+
+## Docs
 
 Documentation can be found [here](https://fredegd.github.io/EasyEase).
 
-### Basic Usage
 
-The esiest apporoach to get started with EasyEase in Processing is:
 
-- import the library, and 
-- initialize an instance of EasyEase Class object and give it a name, for example: `mover`
+## Basic Usage
 
+
+### 1) Import the Library
+
+Once correctly installed, import the library by selecting: Sketch > Import Library > EasyEase.
+or alternatively just type `import easy.ease.*` at the beginning of your sketch.
+
+### 2) Declare and construct objects from the Class EasyEase
+
+An EasyEase object should be declared globally. It may be constructed inside or outside the sketch's `setup()` function
+
+_more information about all different types of constructors: [here](./constructors.md)_
+
+### 3) Access the easing methods
+
+Each EasyEase object contains a set of different easing [methods](./methods.md) as well as several build-in helper functions
+
+### Example:
 
 ```Processing
 import easy.ease.*;
 
-EasyEase mover;
-```
+EasyEase curve = new EasyEase(this, 4);
 
-- in setup() declare the EasyEase object initialized before
-
-```Processing
-void setup(){
-size(600, 400);
-mover = new EasyEase(this);
-mover.setIntensity(3);
+void setup() {
+  size(900,900);
+  for (float i =0; i<=1; i+=0.005) {
+    float interp = curve.out(i)*width;
+    line(interp, i*width, interp, width);
+  }
 }
 ```
 
-- in the draw() a practical and convenient way to access the object´s build in easing
-  is to call the desired Easing method, and pass in a `counter`value (default between 0 and 1), a `start` value and an `end` value as parameters like in the example:
-
-```Processing
-void draw(){
-  float start = 0;
-  float stop = width * 0.9;
-  float x = mover.out(start, stop);
-  fill(255, 0, 0);
-  rect(x, 0, width * 0.1, height);
-}
-```
 <div class="exampleWindow">
   <div class="title">
       <div class="dot red"></div>
       <div class="dot amber"></div>
       <div class="dot green"></div>
-      <p >basic_usage.pde</p>
+      <p >basicUsage.pde</p>
   </div>
 
-![Demo](./images/basic_usage_00.gif)
+![Basic Usage](./sketches/basicUsage/basicUsage.jpg)
 
 </div>
 

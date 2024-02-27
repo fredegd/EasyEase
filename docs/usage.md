@@ -17,17 +17,23 @@ Each EasyEase object contains a set of different easing [methods](./methods.md) 
 
 ### Example:
 
-```Processing
+```java
 import easy.ease.*;
-
-EasyEase curve = new EasyEase(this, 4);
+float intensity = 9.2;
+EasyEase  mover = new EasyEase(this, intensity);
 
 void setup() {
-  size(900,900);
-  for (float i =0; i<=1; i+=0.005) {
-    float interp = curve.out(i)*width;
-    line(interp, i*width, interp, width);
-  }
+  size(600, 400);
+}
+void draw() {
+  float start = 100;
+  float stop = 400;
+  float motor = mover.framer(frameCount*0.5);
+  
+  float x = mover.inOut(motor, start, stop);
+  
+  fill(255, 0, 0);
+  rect(x, (motor%1)*(height-100), 100,100);
 }
 ```
 
@@ -39,6 +45,6 @@ void setup() {
       <p >basicUsage.pde</p>
   </div>
 
-![Basic Usage](./sketches/basicUsage/basicUsage.jpg)
+![Basic Usage](images/basic_usage_00.gif)
 
 </div>

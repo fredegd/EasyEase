@@ -1,8 +1,8 @@
 - Getting Started
 
-  - [Installation](./installation.md)
-  - [Usage](./usage.md)
-  - [Approach](./approach.md)
+  - [Download](./README.md#download)
+  - [Installation](./README.md#installation)
+  - [Usage](./README.md#basic-usage)
 
 - Reference
 
@@ -15,7 +15,7 @@
       - [in()](./methods/inExpo.md)
       - [out()](./methods/outExpo.md)
       - [inOut()](./methods/inOutExpo.md)
-    - [easing Back](./methods.md#Back-Easing)
+    - [Back easing](./methods.md#Back-Easing)
       - [inBack()](./methods/inBack.md)
       - [outBack()](./methods/outBack.md)
       - [inOutBack()](./methods/inOutBack.md)
@@ -31,10 +31,19 @@
       - [inElastic()](./methods/inElastic.md)
       - [outElastic()](./methods/outElastic.md)
       - [inOutElastic()](./methods/inOutElastic.md)
-    - [easing Bounce](./methods.md#Bounce-Easing)
+    - [Bounce easing](./methods.md#Bounce-Easing)
       - [inBounce()](./methods/inBounce.md)
       - [outBounce()](./methods/outBounce.md)
       - [inOutBounce()](./methods/inOutBounce.md)
+
+- [Tools](./tools.md)
+
+  - [setter Functions](./setter.md)
+  - [getter Functions](./getter.md)
+  - [helper Functions](./helper.md)
+
+
+
 
 - Examples
 

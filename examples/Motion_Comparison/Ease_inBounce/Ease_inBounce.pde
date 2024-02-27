@@ -30,7 +30,7 @@ void draw() {
   float stop = width-50;
 
   float counter = curve.framer(frameCount)%totalLength;
-  float nonLinear= curve.inBack(counter, start, stop);
+  float nonLinear= curve.inBounce(counter, start, stop);
   float linear= map(counter, 0, totalLength, start, stop);
   
   background(0);

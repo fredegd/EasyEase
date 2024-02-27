@@ -25,7 +25,7 @@ public class EasyEase {
 	/**
 	 * @see step the value which gets added to the counter at each frame
 	 */
-	public float step = 1 / motionFrameRate;////////////////////////////// default value 1/60
+	public float step = 1f / motionFrameRate;////////////////////////////// default value 1/60
 	/**
 	 * @see totalLength The maximum and total length of the easing motion
 	 */
@@ -117,7 +117,7 @@ public class EasyEase {
 	 * @return String representing the library version.
 	 */
 
-	public static String version() {
+	private static String version() {
 		return VERSION;
 	}
 

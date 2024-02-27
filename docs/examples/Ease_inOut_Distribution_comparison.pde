@@ -4,7 +4,7 @@
  *
  * https://fredegd.github.io/EasyEase/
  *
- * Example: Comparison_distribution Ease_outBounce
+ * Example: Comparison_distribution Ease_inOut
  *
  * Comparing the result of the easing distribution VS a linear distribution
  *
@@ -20,7 +20,7 @@ float start = 100;
 float stop = 500;
 void setup() {
   size(600, 600);
-  curve = new EasyEase(this);
+  curve = new EasyEase(this,3);
 }
 void draw() {
   background(0);
@@ -34,7 +34,7 @@ void draw() {
     line(linearDist, 50, linearDist, height/2);
 
     // Nonlinear distribution
-    float nonLinearDist = curve.outBounce(i/strokes, start, stop,"once");
+    float nonLinearDist = curve.inOut(i/strokes, start, stop,"once");
     color nonli = (frameCount)%strokes==i?#ffffff: #ff0000;
     stroke(nonli);
     line(nonLinearDist, height/2, nonLinearDist, height-50);
