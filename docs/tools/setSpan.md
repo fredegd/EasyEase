@@ -79,9 +79,9 @@ void draw() {
 
 ### Related
 
-- [2nd Constructor](../constructors.md#constructor-2---with-exponential-intensity)
+- [3rd Constructor](../constructors.md#constructor-3-with-exponential-intensity-and-time-related-parameters)
 
-- [3rd Constructor](../constructors.md#constructor-3---with-exponential-intensity-and-time-related-parameters)
+- [.setTotalLenght()](../tools/setTotalLength.md)
 
-- [3rd Constructor](../constructors.md#constructor-3---with-exponential-intensity-and-time-related-parameters)
+- [.setDelay()](../tools/setDelay.md)
 

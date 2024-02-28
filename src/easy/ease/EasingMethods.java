@@ -157,18 +157,6 @@ public class EasingMethods {
 	 * @param amt The new delay value to be set.
 	 */
 	public void setDelay(float amt) {
-		float ref = this.totalLength - this.span;
-		float newSpan = this.totalLength - amt;
-		this.delay = amt;
-		if (this.log)
-			System.out.println("Delay is now set to " + this.delay + " sec.");
-		if (amt > ref) {
-			if (this.log)
-				System.out.println("###\n  # setDelay WARNING: setting " + amt + " seconds delay, will \n"
-						+ "  # shorten the max allowed Motion span to " + newSpan + " sec.\n###");
-			this.span = newSpan;
-		}
-
 		if (amt > this.totalLength) {
 
 			if (this.log)
@@ -176,7 +164,21 @@ public class EasingMethods {
 						"###\n  # setDelay ERROR: setting the delay value greater than the total length  is not allowed."
 								+ "\n  # please set a value lower than " + this.totalLength + ".\n###");
 			return;
+		} else {
+
+			float ref = this.totalLength - this.span;
+			this.delay = amt;
+			if (this.log)
+				System.out.println("Delay is now set to " + this.delay + " sec.");
+			if (amt > ref) {
+				float newSpan = this.totalLength - amt;
+				if (this.log)
+					System.out.println("###\n  # setDelay WARNING: setting " + amt + " seconds delay, will \n"
+							+ "  # shorten the max allowed Motion span to " + newSpan + " sec.\n###");
+				this.span = newSpan;
+			}
 		}
+
 	}
 
 	/**
@@ -214,7 +216,7 @@ public class EasingMethods {
 	 */
 	public float framer(float input) {
 
-		return input==0?0f: ((input-1) / this.motionFrameRate);
+		return input == 0 ? 0f : ((input - 1) / this.motionFrameRate);
 	}
 
 	/**
@@ -359,7 +361,7 @@ public class EasingMethods {
 	//
 	//
 	/////////////////////////////
-	///////////LINEAR OUTPUT
+	/////////// LINEAR OUTPUT
 	////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////
@@ -484,7 +486,7 @@ public class EasingMethods {
 	public final float inSine(float inputCt, float start, float end, String type) {
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
-		return (float) (start + (1 - Math.cos(progress * Math.PI * 0.5 )) * (end - start));
+		return (float) (start + (1 - Math.cos(progress * Math.PI * 0.5)) * (end - start));
 	}
 
 	//
@@ -508,7 +510,7 @@ public class EasingMethods {
 	public final float outSine(float inputCt, float start, float end, String type) {
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
-		return (float) (start + Math.sin(progress * Math.PI * 0.5 ) * (end - start));
+		return (float) (start + Math.sin(progress * Math.PI * 0.5) * (end - start));
 
 	}
 
