@@ -41,8 +41,15 @@
       - [.setTotalLength()](./tools/setTotalLength.md)
       - [.setSpan()](./tools/setSpan.md)
       - [.setDelay()](./tools/setDelay.md)
+      - [.resetCounter()](./tools/resetCounter.md)
     - [getter Functions](./getter.md)
+      - [.getIntensity()](./tools/getIntensity.md)
+      - [.getTotalLength()](./tools/getTotalLength.md)
+      - [.getSpan()](./tools/getSpan.md)
+      - [.getDelay()](./tools/getDelay.md)
+      - [.getCounter()](./tools/getCounter.md)
     - [helper Functions](./helper.md)
+      - [.framer()](./tools/framer.md)
 
 
 
