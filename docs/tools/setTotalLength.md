@@ -3,7 +3,7 @@
 
 ### Description 
 
-This function is used to pass a value for the   ```totalLength``` variable of an EasyEase Object.
+This function is used to set a value for the   ```totalLength``` variable of an EasyEase Object.
 
 It receives a float value which should positive and be different than 0.0 to avoid bugs.
 

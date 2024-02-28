@@ -8,7 +8,7 @@ There are 3 different constructor functions  each of them initializes an instanc
 
 Constructs an instance of the EasyEase Class expecting only ```this```, a reference to the current Sketch,  as a argument.
 
-It assigns default values for the global [parameters](./globalParameters.md) like ```intesity```, ```totalLength```, ```curveSpan```, ```delay``` and ```frameRate```.
+It assigns default values for the global [parameters](./globalParameters.md) like ```intesity```, ```totalLength```, ```curveSpan```, and ```delay```.
 
 
 ### Example:
@@ -82,7 +82,7 @@ Constructs an instance of the EasyEase Class expecting
 
 as arguments.
 
-It assigns default values for other global [parameters](./globalParameters.md) ```intesity```, ```totalLength```, ```curveSpan```, ```delay``` and ```frameRate```.
+It assigns default values for other global [parameters](./globalParameters.md) ```intesity```, ```totalLength```, ```curveSpan```, and ```delay```.
 
 
 ### Example:
@@ -159,9 +159,7 @@ Constructs an instance of the EasyEase Class expecting
 -  a  ```float``` value for the ```curveSpan``` ,
 -  a  ```float``` value for the ```delay```
 
- as arguments.
-
- It assigns the  default value for the global [parameter](./globalParameters.md) ```frameRate```.
+ as arguments.  
 
 
 ### Example:

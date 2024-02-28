@@ -3,7 +3,7 @@
 
 ### Description 
 
-This function is used to pass a value for the   ```intensity``` variable of an EasyEase Object.
+This function is used to set a value for the   ```intensity``` variable of an EasyEase Object.
 
 It affects the result of the curve bending only for: [**Exponential**](../methods.md#exponential-easing), [**Back**](../methods.md#back-easing) and [**Circular**](../methods.md#circular-easing) easing methods
 
