@@ -1,14 +1,11 @@
 # .setSpan()
 
+### Description
 
-### Description 
-
-This function is used to set a value for the   ```span``` variable of an EasyEase Object.
+This function is used to set a value for the `span` variable of an EasyEase Object.
 
 It receives a float value which should be positive and may be greater or equal than 0.0;
 
-
- 
 ### Examples
 
 ```java
@@ -46,8 +43,6 @@ void draw() {
 
 ```
 
-
-
 <div class="exampleWindow">
   <div class="title">
       <div class="dot red"></div>
@@ -60,22 +55,17 @@ void draw() {
 
 </div>
 
-
-
-
 ### Syntax
 
-```myCurve.setSpan(span) ```
+`myCurve.setSpan(span) `
 
 ### Parameters
 
-**```span```** (float)  the motion span expressed in seconds
-
+**`span`** (float) the motion span expressed in seconds
 
 ### Return
 
 **void**
-
 
 ### Related
 
@@ -84,4 +74,3 @@ void draw() {
 - [.setTotalLenght()](./tools/setTotalLength.md)
 
 - [.setDelay()](./tools/setDelay.md)
-

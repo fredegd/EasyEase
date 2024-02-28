@@ -2,14 +2,13 @@
 
 The EasyEase Class can be initialized in different ways, enhancing flexibility and customization
 
-There are 3 different constructor functions  each of them initializes an instances of the Class according to the provided arguments 
+There are 3 different constructor functions each of them initializes an instances of the Class according to the provided arguments
 
 ## Constructor #1 - default constructor
 
-Constructs an instance of the EasyEase Class expecting only ```this```, a reference to the current Sketch,  as a argument.
+Constructs an instance of the EasyEase Class expecting only `this`, a reference to the current Sketch, as a argument.
 
-It assigns default values for the global [parameters](./globalParameters.md) like ```intesity```, ```totalLength```, ```curveSpan```, and ```delay```.
-
+It assigns default values for the global [parameters](./globalParameters.md) like `intesity`, `totalLength`, `curveSpan`, and `delay`.
 
 ### Example:
 
@@ -47,7 +46,6 @@ void setup() {
 
 </div>
 
-
 ### Syntax
 
 ```java
@@ -59,8 +57,7 @@ EasyEase curve = new EasyEase( this );
 
 ### Parameters
 
-**```this```** (PApplet) the current sketch
-
+**`this`** (PApplet) the current sketch
 
 ### Returns
 
@@ -72,18 +69,16 @@ Object
 <br>
 <br>
 
-
-## Constructor #2 -  with exponential intensity
+## Constructor #2 - with exponential intensity
 
 Constructs an instance of the EasyEase Class expecting
 
--  ```this``` as a reference to the current sketch, and 
-- a  ```float``` value for the ```intensity``` 
+- `this` as a reference to the current sketch, and
+- a `float` value for the `intensity`
 
 as arguments.
 
-It assigns default values for other global [parameters](./globalParameters.md) ```intesity```, ```totalLength```, ```curveSpan```, and ```delay```.
-
+It assigns default values for other global [parameters](./globalParameters.md) `intesity`, `totalLength`, `curveSpan`, and `delay`.
 
 ### Example:
 
@@ -124,20 +119,20 @@ void setup() {
 
 </div>
 
-
 ### Syntax
 
 ```java
 
-EasyEase curve = new EasyEase(this, intensity ); 
+EasyEase curve = new EasyEase(this, intensity );
 
 
 ```
+
 ### Parameters
 
-**```this```** (PApplet) the current sketch
+**`this`** (PApplet) the current sketch
 
-**```intensity```** (float) The intensity / exponential value of the easing curve.
+**`intensity`** (float) The intensity / exponential value of the easing curve.
 
 ### Returns
 
@@ -149,18 +144,17 @@ Object
 <br>
 <br>
 
+# Constructor #3 - with exponential intensity and time related parameters
 
-# Constructor #3  -  with exponential intensity and time related parameters
+Constructs an instance of the EasyEase Class expecting
 
-Constructs an instance of the EasyEase Class expecting 
-- ```this``` as a reference to the current sketch,
-- a ```float``` value for the ```intensity``` ,
--  a  ```float``` value for the ```totalLength``` ,
--  a  ```float``` value for the ```curveSpan``` ,
--  a  ```float``` value for the ```delay```
+- `this` as a reference to the current sketch,
+- a `float` value for the `intensity` ,
+- a `float` value for the `totalLength` ,
+- a `float` value for the `curveSpan` ,
+- a `float` value for the `delay`
 
- as arguments.  
-
+as arguments.
 
 ### Example:
 
@@ -169,13 +163,13 @@ import easy.ease.*;
 
 // construct an instance of the EaseEase Class called curve
 // passing "this" as a reference to the current sketch
-// and float values for the intensity, totalLength, 
+// and float values for the intensity, totalLength,
 // curveSpan and delay
 
 float intensity = 4.3;  // the exponential value of the curve
 float totalLength = 1; // the total length of the interpolation
 float curveSpan = 0.6; // the span of the easing curve
-float delay = 0.4; // the delay before the curve starts bending 
+float delay = 0.4; // the delay before the curve starts bending
 EasyEase curve = new EasyEase(this, intensity, totalLength, curveSpan, delay);
 
 void setup() {
@@ -205,28 +199,27 @@ loadPixels();
 
 </div>
 
-
 ### Syntax
 
 ```java
 
-EasyEase curve = new EasyEase(this, intensity, totalLength, curveSpan, delay); 
+EasyEase curve = new EasyEase(this, intensity, totalLength, curveSpan, delay);
 
 
 ```
+
 ### Parameters
 
-**```this```** (PApplet) the current sketch
+**`this`** (PApplet) the current sketch
 
-**```intensity```** (float) The intensity / exponential value of the easing curve.
+**`intensity`** (float) The intensity / exponential value of the easing curve.
 
-**```totalLength```** (float) The  total length (in seconds) of the interpolation / motion
+**`totalLength`** (float) The total length (in seconds) of the interpolation / motion
 
-**```curveSpan```** (float) The span (in seconds) of the easing curve.
+**`curveSpan`** (float) The span (in seconds) of the easing curve.
 
-**```delay```** (float) the delay (in seconds) before the curve starts bending
+**`delay`** (float) the delay (in seconds) before the curve starts bending
 
 ### Returns
 
 Object
-

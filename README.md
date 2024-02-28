@@ -1,22 +1,18 @@
 # EasyEase library for Processing
-Easing Function and non linear distribution utilities for  [Processing](https://processing.org/) IDE
+
+Easing Function and non linear distribution utilities for [Processing](https://processing.org/) IDE
 
 ![Demo](./images/promoBanner.gif)
 
-## General Purpose 
+## General Purpose
 
-**EasyEase** provides a ready-to-use setup for in order to apply [easing curves](#easing-curves) to a spatial distribution or an animations, resulting in more natural and visually appealing effects.
-
-
+**EasyEase** provides a ready-to-use setup for in order to apply [easing curves](https://fredegd.github.io/EasyEase/#/./overviewTable) to a spatial distribution or an animations, resulting in more natural and visually appealing effects.
 
 ## Download:
 
 [here](https://github.com/fredegd/EasyEase/releases) the latest release, including the library, documentation and examples. in **.zip** format
 
-
 ## Installation
-
-
 
 ### opt.1: Manually install:
 
@@ -24,22 +20,19 @@ Easing Function and non linear distribution utilities for  [Processing](https://
 
 - Unzip / extract the content of **EasyEase.zip** into your Processing sketchbook's /libraries folder.
 
-*note: sketchbook's /libraries folder is usually located under /User/Yourname/Documents/Processing/libraries.
+_note: sketchbook's /libraries folder is usually located under /User/Yourname/Documents/Processing/libraries.
 in order to view or change your sketchbook location go to:
-File > Preferences. 
-The "sketchbook location" setting is the first option of the dialog*
+File > Preferences.
+The "sketchbook location" setting is the first option of the dialog_
 
-###  opt.2: ~~Library manager (not yet available)~~
+### opt.2: ~~Library manager (not yet available)~~
+
 ~~Open Processing,~~
 ~~go-to: Sketch > Import Library > Manage Libraries > EasyEase~~
-
-
 
 ## Documentation
 
 Documentation can be found at this [link](https://fredegd.github.io/EasyEase).
-
-
 
 ## Basic Usage
 
@@ -74,9 +67,9 @@ void draw() {
   float start = 100;
   float stop = 400;
   float motor = mover.framer(frameCount*0.5);
-  
+
   float x = mover.inOut(motor, start, stop);
-  
+
   fill(255, 0, 0);
   rect(x, (motor%1)*(height-100), 100,100);
 }
@@ -94,9 +87,6 @@ void draw() {
 
 </div>
 
-
-
-
 ## TestedPlatforms:
 
 - OS-X
@@ -105,15 +95,11 @@ void draw() {
 
 ### Processing:
 
-The latest Processing version the library has been tested with: **4.1.1** 
-
-
+The latest Processing version the library has been tested with: **4.1.1**
 
 ### Dependencies:
 
 EasyEase depends on no other libraries
-
-
 
 ### Other Examples:
 
@@ -122,39 +108,26 @@ EasyEase depends on no other libraries
 - 3
 - 4
 
-
-
 ## Source
 
 https://github.com/fredegd/EasyEase
 
-
-
 #### This Library was written is in accordance with the Processing library guidelines
 
- [info](https://github.com/benfry/processing4/wiki/Library-Guidelines)
-
-
+[info](https://github.com/benfry/processing4/wiki/Library-Guidelines)
 
 ### Keywords:
 
-easing ,  motion,  easing-curve,  gradient,  non-linear,  curve, interpolation
-
-
+easing , motion, easing-curve, gradient, non-linear, curve, interpolation
 
 ### Last update
 
 February 2024
 
-
-
-
 ### Issues
 
 Issues, unexpected bugs and behaviors, or any kind of suggestion or improvement is highly welcome and can be posted [here](https://github.com/fredegd/EasyEase/issues)
 
-
-
 ### Troubleshooting
 
-If you're having trouble, have a look at the [Processing Wiki](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library) for further information, please contact the  [author](https://fredegd.dev).
+If you're having trouble, have a look at the [Processing Wiki](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library) for further information, please contact the [author](https://fredegd.dev).

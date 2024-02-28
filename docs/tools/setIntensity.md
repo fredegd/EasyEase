@@ -1,9 +1,8 @@
 # .setIntensity()
 
+### Description
 
-### Description 
-
-This function is used to set a value for the   ```intensity``` variable of an EasyEase Object.
+This function is used to set a value for the `intensity` variable of an EasyEase Object.
 
 It affects the result of the curve bending only for: [**Exponential**](../methods.md#exponential-easing), [**Back**](../methods.md#back-easing) and [**Circular**](../methods.md#circular-easing) easing methods
 
@@ -11,7 +10,6 @@ The input parameter can be any float value.
 
 <!-- it is suggested to consult [this table](#intesity-table) -->
 
- 
 ### Examples
 
 ```java
@@ -28,7 +26,7 @@ void draw() {
   stroke(#ff0000);
   fill(#ff0000);
   strokeWeight(5);
-  
+
   float intensity = map(mouseX, 0, width, -50, 50);
   curve.setIntensity(intensity);
 
@@ -53,8 +51,6 @@ void draw() {
 
 ```
 
-
-
 <div class="exampleWindow">
   <div class="title">
       <div class="dot red"></div>
@@ -67,28 +63,22 @@ void draw() {
 
 </div>
 
-
 <!-- ### Intesity table -->
-
 
 ### Syntax
 
-```myCurve.setIntensity(intensity) ```
+`myCurve.setIntensity(intensity) `
 
 ### Parameters
 
-**```intensity```** (float)  the exponetial factor of the curve 
-
+**`intensity`** (float) the exponetial factor of the curve
 
 ### Return
 
 **void**
-
 
 ### Related
 
 - [2nd Constructor](constructors.md#constructor-2-with-exponential-intensity)
 
 - [3rd Constructor](constructors.md#constructor-3-with-exponential-intensity-and-time-related-parameters)
-
-

@@ -1,14 +1,11 @@
 # .setDelay()
 
+### Description
 
-### Description 
-
-This function is used to set a value for the   ```delay``` variable of an EasyEase Object.
+This function is used to set a value for the `delay` variable of an EasyEase Object.
 
 It receives a float value which should be positive and may be greater or equal than 0.0;
 
-
- 
 ### Example
 
 ```java
@@ -30,7 +27,7 @@ void draw() {
   float delay = map(mouseX, 0, width, 0, totalLength);
   curve.setDelay(delay);
   //when calling setDelay inside of draw()
-  // setSpan() should also be called to make sure the 
+  // setSpan() should also be called to make sure the
   // motion span is tuned accordingly
   curve.setSpan(totalLength-delay);
 
@@ -47,8 +44,6 @@ void draw() {
 
 ```
 
-
-
 <div class="exampleWindow">
   <div class="title">
       <div class="dot red"></div>
@@ -61,29 +56,22 @@ void draw() {
 
 </div>
 
-
-
-
 ### Syntax
 
-```myCurve.setDelay(delay) ```
+`myCurve.setDelay(delay) `
 
 ### Parameters
 
-**```delay```** (float)  the amout of delay in seconds before the motion starts
-
+**`delay`** (float) the amout of delay in seconds before the motion starts
 
 ### Return
 
 **void**
 
-
 ### Related
-
 
 - [3rd Constructor](constructors.md#constructor-3-with-exponential-intensity-and-time-related-parameters)
 
 - [.setTotalLenght()](./tools/setTotalLength.md)
 
 - [.setSpan()](./tools/setSpan.md)
-

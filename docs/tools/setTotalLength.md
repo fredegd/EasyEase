@@ -1,14 +1,11 @@
 # .setTotalLength()
 
+### Description
 
-### Description 
-
-This function is used to set a value for the   ```totalLength``` variable of an EasyEase Object.
+This function is used to set a value for the `totalLength` variable of an EasyEase Object.
 
 It receives a float value which should positive and be different than 0.0 to avoid bugs.
 
-
- 
 ### Examples
 
 ```java
@@ -42,8 +39,6 @@ void draw() {
 
 ```
 
-
-
 <div class="exampleWindow">
   <div class="title">
       <div class="dot red"></div>
@@ -56,30 +51,22 @@ void draw() {
 
 </div>
 
-
-
-
 ### Syntax
 
-```myCurve.setTotalLength(totalLenght) ```
+`myCurve.setTotalLength(totalLenght) `
 
 ### Parameters
 
-**```totalLenght```** (float)  the duration in seconds of the motion  
-
+**`totalLenght`** (float) the duration in seconds of the motion
 
 ### Return
 
 **void**
 
-
 ### Related
-
-
 
 - [3rd Constructor](constructors.md#constructor-3-with-exponential-intensity-and-time-related-parameters)
 
 - [.setSpan()](./tools/setSpan.md)
 
 - [.setDelay()](./tools/setDelay.md)
-
