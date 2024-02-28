@@ -11,7 +11,7 @@ An EasyEase Object comes with a set of methods that reproduce the most common in
 
 --> [overview](./methodsOverview.md)
 
-# Exponential Easing
+## Exponential Easing
 
 Exponential easing accelerates or decelerates motion based on the value of the exponential factor.
 the higher the factor, the steeper the curve
@@ -56,7 +56,7 @@ It starts slow, accelerates until reaching full-speed at the midpoint, then and 
 <br>
 <br>
 
-# Back Easing
+## Back Easing
 
 Back easing incorporates a brief overshoot before settling into the target position. This method is characterized by a slight backward motion before moving forward, creating an effect similar to pulling back and releasing a spring.
 
@@ -99,7 +99,7 @@ It starts slow, accelerates until reaching full-speed at the midpoint, then and 
 <br>
 <br>
 
-# Circular Easing
+## Circular Easing
 
 Circular easing follows a circular motion pattern. This method is characterized by its rounded curves
 
@@ -142,7 +142,7 @@ It starts slow, accelerates until reaching full-speed at the midpoint, then and 
 <br>
 <br>
 
-# Sinusoidal Easing
+## Sinusoidal Easing
 
 Sinusoidal easing applies a sinusoidal function to the motion, resulting in a smooth, wave-like transition, providing a gentle acceleration and deceleration.
 
@@ -185,7 +185,7 @@ It starts slow, accelerates until reaching full-speed at the midpoint, then and 
 <br>
 <br>
 
-# Elastic Easing
+## Elastic Easing
 
 Elastic easing simulates an elastic or rubber band-like motion, causing the object to overshoot its target before settling into the final position. This method is useful for creating bouncy animations.
 
@@ -228,7 +228,7 @@ It starts slow, accelerates until reaching full-speed at the midpoint, then and 
 <br>
 <br>
 
-# Bounce Easing
+## Bounce Easing
 
 Bounce easing mimics the behavior of a bouncing ball, introducing a series of bounces as the motion progresses.
 This method adds a dynamic animation, resembling the way objects bounce in the real world.

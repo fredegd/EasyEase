@@ -5,14 +5,20 @@
 Calculates an ease-in curve interpolation which starts slowly and progressively speeds up,
 
 
-This method expects values in a range between **0.0** and **1.0**  for the **counter** parameter and returns a nonlinear interpolation between **0.0** and **1.0**
+This method expects values in a range between **0.0** and **totalLength**  for the **counter** parameter. 
+
+
+In case a custom value was set for **totalLength**, the **counter** parameter should be tuned accordingly.
+
+It returns by default a nonlinear interpolation between **0.0** and **1.0** or in case **start** and **stop** parameter are being passed to the function, it returns an interpolation between  those two values
  
-in case a custom value was set for [totalLenght](./totalLength.md), the **counter** value should be tuned accordingly.
+
  
-### Examples
+### Example
 
 ```java
 import easy.ease.*;
+
 float intensity = 4.0;
 float totalLength = 2;
 float span = 1.5;
@@ -26,9 +32,9 @@ void setup() {
 void draw() {
   background(#f1f1f1);
   fill(#ff0000);
-  float mot_cont = curve.framer(frameCount);
+  float mot_counter = curve.framer(frameCount);
   
-  float x = curve.in(mot_cont) * (width-100);
+  float x = curve.in(mot_counter ) * (width-100);
 
   rect(x, 0, 100, width);
 }
@@ -45,7 +51,7 @@ void draw() {
       <p >Ease_in.pde</p>
   </div>
 
-![.in()](../images/Ease_in.gif)
+![.in()](../images/methods/ease_in_method.gif)
 
 </div>
 

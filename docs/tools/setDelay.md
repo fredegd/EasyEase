@@ -1,15 +1,12 @@
-# .setIntensity()
+# .setDelay()
 
 
 ### Description 
 
-This function is used to pass a value for the   ```intensity``` variable of an EasyEase Object.
+This function is used to pass a value for the   ```delay``` variable of an EasyEase Object.
 
-It affects the result of the curve bending only for: [**Exponential**](../methods.md#exponential-easing), [**Back**](../methods.md#back-easing) and [**Circular**](../methods.md#circular-easing) easing methods
+It receives a float value which should be positive and may be greater or equal than 0.0;
 
-The input parameter can be any float value.
-
-<!-- it is suggested to consult [this table](#intesity-table) -->
 
  
 ### Examples
@@ -51,6 +48,7 @@ void draw() {
   text (intensity, 550,350);
 }
 
+
 ```
 
 
@@ -60,24 +58,23 @@ void draw() {
       <div class="dot red"></div>
       <div class="dot amber"></div>
       <div class="dot green"></div>
-      <p >setIntensity.pde</p>
+      <p >setDelay.pde</p>
   </div>
 
-![.in()](../images/tools/setIntensity.gif)
+![.setDelay()](../images)
 
 </div>
 
 
-<!-- ### Intesity table -->
 
 
 ### Syntax
 
-```myCurve.setIntensity(intensity) ```
+```myCurve.setDelay(delay) ```
 
 ### Parameters
 
-**```intensity```** (float)  the exponetial factor of the curve 
+**```delay```** (float)  the amout of delay in seconds before the motion starts
 
 
 ### Return

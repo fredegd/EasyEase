@@ -37,7 +37,10 @@
       - [inOutBounce()](./methods/inOutBounce.md)
   - [Tools](./tools.md)
     - [setter Functions](./setter.md)
-     - [.setIntensity()](./tools/setIntensity.md)
+      - [.setIntensity()](./tools/setIntensity.md)
+      - [.setTotalLength()](./tools/setTotalLength.md)
+      - [.setSpan()](./tools/setSpan.md)
+      - [.setDelay()](./tools/setDelay.md)
     - [getter Functions](./getter.md)
     - [helper Functions](./helper.md)
 

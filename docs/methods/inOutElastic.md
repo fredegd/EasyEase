@@ -6,31 +6,40 @@ Calculates an ease-in curve interpolation which starts slow, accelerates to full
 
 
 
-This method expects values in a range between **0.0** and **1.0**  for the **counter** parameter and returns a nonlinear interpolation between **0.0** and **1.0**
- 
-in case a custom value was set for [totalLenght](./totalLength.md), the **counter** value should be tuned accordingly.
- 
-### Examples
+In case a custom value was set for **totalLength**, the **counter** parameter should be tuned accordingly.
 
-```Processing
+It returns by default a nonlinear interpolation between **0.0** and **1.0** or in case **start** and **stop** parameter are being passed to the function, it returns an interpolation between  those two values
+
+
+### Example
+
+```java
 import easy.ease.*;
-float intensity = 3;
-EasyEase curve = new EasyEase(this, intensity);
+
+float intensity = 4.0;
+float totalLength = 2;
+float span = 1.5;
+float delay = 0.25;
+EasyEase curve = new EasyEase(this);
 
 void setup() {
   size(600, 400);
+  curve.setTotalLength(totalLength);
+  curve.setSpan(span);
+  curve.setDelay(delay);
 }
 
 void draw() {
   background(#f1f1f1);
   fill(#ff0000);
-
-  float x = curve.inOutElastic(frameCount/60.0)*width;
+  float mot_counter = curve.framer(frameCount);
   
-  rect(x, 0, 10, width);
-}
-```
+  float x = curve.inOutElastic(mot_counter ) * (width-100);
 
+  rect(x, 0, 100, width);
+}
+
+```
 
 
 <div class="exampleWindow">
@@ -41,7 +50,7 @@ void draw() {
       <p >Ease_in_out_elastic.pde</p>
   </div>
 
-![.inOut()](../images/Ease_inOutElastic.gif)
+![.inOutElastic()](../images/methods/ease_inOutElastic_method.gif)
 
 </div>
 
