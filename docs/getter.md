@@ -1,5 +1,7 @@
 # Getter Functions
 
+#### <---[Tools](./tools.md)
+
 
 ## .getIntensity()
 

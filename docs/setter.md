@@ -1,5 +1,8 @@
 # Setter Functions
 
+#### <---[Tools](./tools.md)
+
+
 ## .setIntensity()
 
 This function is used to set a value for the intensity variable of an EasyEase Object.
