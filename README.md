@@ -2,7 +2,7 @@
 
 Easing Function and non linear distribution utilities for [Processing](https://processing.org/) IDE
 
-![Demo](./images/promoBanner.gif)
+![Demo](./docs/images/promoBanner.gif)
 
 ## General Purpose
 
@@ -83,7 +83,7 @@ void draw() {
       <p >basicUsage.pde</p>
   </div>
 
-![Basic Usage](images/basic_usage_00.gif)
+![Basic Usage](./docs/images/basic_usage_00.gif)
 
 </div>
 
