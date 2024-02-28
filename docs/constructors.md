@@ -4,7 +4,7 @@ The EasyEase Class can be initialized in different ways, enhancing flexibility a
 
 There are 3 different constructor functions  each of them initializes an instances of the Class according to the provided arguments 
 
-# Constructor #1 - default constructor
+## Constructor #1 - default constructor
 
 Constructs an instance of the EasyEase Class expecting only ```this```, a reference to the current Sketch,  as a argument.
 
@@ -43,7 +43,7 @@ void setup() {
         <p >defaultConstructor.pde</p>
   </div>
 
-![.inOutSine()](../images/default_Constructor.jpg)
+![.inOutSine()](./images/default_Constructor.jpg)
 
 </div>
 
@@ -73,7 +73,7 @@ Object
 <br>
 
 
-# Constructor #2 -  with exponential intensity
+## Constructor #2 -  with exponential intensity
 
 Constructs an instance of the EasyEase Class expecting
 
@@ -120,7 +120,7 @@ void setup() {
         <p >2nd_Constructor.pde</p>
   </div>
 
-![.inOutSine()](../images/2nd_Constructor.jpg)
+![.inOutSine()](./images/2nd_Constructor.jpg)
 
 </div>
 
@@ -203,7 +203,7 @@ loadPixels();
         <p >3rd_Constructor.pde</p>
   </div>
 
-![.inOutSine()](../images/3rd_Constructor.jpg)
+![.inOutSine()](./images/3rd_Constructor.jpg)
 
 </div>
 

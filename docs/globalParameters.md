@@ -1,6 +1,6 @@
 # Global Parameters
 
-the following parameters are global variables of the EasyEase object.
+the following parameters are global variables of each EasyEase object.
 
 each of them receives default values until no other custom value are being assigned.
 
@@ -12,7 +12,7 @@ values can be passed
 
 
 
-### Overview
+## Overview
 
 **```intensity```** (float) The intensity / exponential value of the easing curve.
 
@@ -33,3 +33,8 @@ values can be passed
 
 
 
+## Related:
+
+[constructor functions](./constructors.md)
+
+[Easing methods](./methods.md)

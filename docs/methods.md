@@ -1,6 +1,6 @@
 # Easing Methods  
 
-An EasyEase object contains a set of methods that reproduce the most common interpolation curves:
+When creating an EasyEase Object, it comes with a set of methods that reproduce the most common interpolation curves:
 
 - [Exponential easing](#Exponential-easing)
 - [Sinusoidal easing](#Sinusoidal-Easing)
@@ -8,6 +8,8 @@ An EasyEase object contains a set of methods that reproduce the most common inte
 - [Elastic easing](#Elastic-Easing)
 - [easing Bounce](#Bounce-Easing)
 - [easing Back](#Back-Easing)
+
+--> [overview](./methodsOverview.md)
 
 # Exponential Easing
 
@@ -68,7 +70,7 @@ It starts slow, accelerates until reaching full-speed at the midpoint, then and 
 <table>
   <thead>
     <tr>
-      <th>.inBack()</th>
+      <th>.inBack()  </th>
       <th>.outBack()</th>
       <th>.inOutBack()</th>
     </tr>
