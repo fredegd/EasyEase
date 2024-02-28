@@ -81,9 +81,9 @@ void draw() {
 ### Related
 
 
-- [3rd Constructor](../constructors.md#constructor-3-with-exponential-intensity-and-time-related-parameters)
+- [3rd Constructor](constructors.md#constructor-3-with-exponential-intensity-and-time-related-parameters)
 
-- [.setTotalLenght()](setTotalLength.md)
+- [.setTotalLenght()](./tools/setTotalLength.md)
 
-- [.setSpan()](setSpan.md)
+- [.setSpan()](./tools/setSpan.md)
 
