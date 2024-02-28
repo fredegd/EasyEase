@@ -18,7 +18,7 @@ Easing Function and non linear distribution utilities for  [Processing](https://
 
 
 
-### Manually install:
+### opt.1: Manually install:
 
 - [Download]("https://github.com/fredegd/EasyEase/releases") the latest release of the library.
 
@@ -29,19 +29,19 @@ in order to view or change your sketchbook location go to:
 File > Preferences. 
 The "sketchbook location" setting is the first option of the dialog*
 
-### ~~Library manager (not yet available)~~
+###  opt.1: ~~Library manager (not yet available)~~
 ~~Open Processing,~~
 ~~go-to: Sketch > Import Library > Manage Libraries > EasyEase~~
 
 
 
-## Docs
+## Documentation
 
 Documentation can be found at this [link](https://fredegd.github.io/EasyEase).
 
 
 
-# Basic Usage
+## Basic Usage
 
 ### 1) Import the Library
 
@@ -97,17 +97,15 @@ void draw() {
 
 
 
-### TestedPlatforms:
+## TestedPlatforms:
 
 - OS-X
 - ~~Windows~~
 - ~~Linux~~
 
+### Processing:
 
-
-#### Processing:
-
-**4.1.1** (The latest Processing version the library has been tested with)
+The latest Processing version the library has been tested with: **4.1.1** 
 
 
 
@@ -117,7 +115,7 @@ EasyEase depends on no other libraries
 
 
 
-## Other Examples:
+### Other Examples:
 
 - 1
 - 2
@@ -126,13 +124,13 @@ EasyEase depends on no other libraries
 
 
 
-### Source
+## Source
 
 https://github.com/fredegd/EasyEase
 
 
 
-### This Library was written is in accordance with the Processing library guidelines
+#### This Library was written is in accordance with the Processing library guidelines
 
  [info](https://github.com/benfry/processing4/wiki/Library-Guidelines)
 

@@ -22,29 +22,27 @@
 
 import easy.ease.*;
 
-EasyEase controlled;
-
 float intensity = 3.0;
-float start = 50;
-float stop = width-50;
-
 float totalLength = 4;
-float span = 4;
-float delay = 0;
+float span = 2;
+float delay = 1;
+EasyEase   controlled = new EasyEase(this, intensity, totalLength, span, delay);
 
 
 void setup() {
   size(600, 600);
   rectMode(CENTER);
-  controlled = new EasyEase(this, intensity, totalLength, span, delay);
   // the method getFramerate() returns the value of the
   // EasyEase object own framerate
-  // default is 60.0
+  // default is 60.0 fps
   //
   // when setting a different sketch frameRate, is it important
   // to call the  method setFrameRate(float value) as well
   //
-  println(controlled.getFrameRate());
+  frameRate(10);
+  controlled.setFrameRate(10);
+
+  println("object´s frame rate: "+controlled.getFrameRate());
 }
 
 void draw() {
@@ -53,8 +51,7 @@ void draw() {
   noStroke();
   textSize(30);
   textAlign(LEFT);
-  //float count = frameCount/60.0;
-  //  float count = controlled.framer(frameCount);
+  
   float count = controlled.framer(frameCount);
   int seconds = floor(count);
 
@@ -63,7 +60,7 @@ void draw() {
   float start = 50;
   float stop = width-50;
 
-  float x = controlled.inOut(count, start, stop, "alternate" );
+  float x = controlled.inOut(count, start, stop, "loop" );
 
   rect(x, height/2, 100, 100);
 }

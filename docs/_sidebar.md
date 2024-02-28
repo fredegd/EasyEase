@@ -35,12 +35,12 @@
       - [inBounce()](./methods/inBounce.md)
       - [outBounce()](./methods/outBounce.md)
       - [inOutBounce()](./methods/inOutBounce.md)
+  - [Tools](./tools.md)
+    - [setter Functions](./setter.md)
+     - [.setIntensity()](./tools/setIntensity.md)
+    - [getter Functions](./getter.md)
+    - [helper Functions](./helper.md)
 
-- [Tools](./tools.md)
-
-  - [setter Functions](./setter.md)
-  - [getter Functions](./getter.md)
-  - [helper Functions](./helper.md)
 
 
 

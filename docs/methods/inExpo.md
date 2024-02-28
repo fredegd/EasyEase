@@ -11,10 +11,13 @@ in case a custom value was set for [totalLenght](./totalLength.md), the **counte
  
 ### Examples
 
-```Processing
+```java
 import easy.ease.*;
-float intensity = 3;
-EasyEase curve = new EasyEase(this, intensity);
+float intensity = 4.0;
+float totalLength = 2;
+float span = 1.5;
+float delay = 0.25;
+EasyEase curve = new EasyEase(this, intensity, totalLength, span, delay);
 
 void setup() {
   size(600, 400);
@@ -23,11 +26,13 @@ void setup() {
 void draw() {
   background(#f1f1f1);
   fill(#ff0000);
+  float mot_cont = curve.framer(frameCount);
+  
+  float x = curve.in(mot_cont) * (width-100);
 
-  float x = curve.in(frameCount/60.0)*width;
-
-  rect(x, 0, 10, width);
+  rect(x, 0, 100, width);
 }
+
 ```
 
 
