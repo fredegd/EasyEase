@@ -11,6 +11,7 @@
     - [2nd Constructor](./constructors.md#constructor-2-with-exponential-intensity)
     - [3rd Constructor](./constructors.md#constructor-3-with-exponential-intensity-and-time-related-parameters)
   - [Easing Methods](./methods.md)
+    - [Overview Table](./overviewTable.md)
     - [Exponential easing](./methods.md#Exponential-easing)
       - [in()](./methods/inExpo.md)
       - [out()](./methods/outExpo.md)

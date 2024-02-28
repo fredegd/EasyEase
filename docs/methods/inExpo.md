@@ -1,5 +1,8 @@
 # .in()
 
+#### <-- [Easing methods](./methods.md)
+
+
 
 ### Description 
 Calculates an ease-in curve interpolation which starts slowly and progressively speeds up,

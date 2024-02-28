@@ -1,5 +1,8 @@
 # .inOutBounce()
 
+#### <-- [Easing methods](./methods.md)
+
+
 
 ### Description 
 Calculates an ease-in curve interpolation which starts slow, accelerates to full-speed at the midpoint, then and progressively slows down,

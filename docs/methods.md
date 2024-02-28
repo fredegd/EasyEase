@@ -9,7 +9,7 @@ An EasyEase Object comes with a set of methods that reproduce the most common in
 - [easing Bounce](#Bounce-Easing)
 - [easing Back](#Back-Easing)
 
---> [overview](./methodsOverview.md)
+####  [Overview Table](./overviewTable.md) -->
 
 ## Exponential Easing
 

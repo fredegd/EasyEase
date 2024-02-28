@@ -1,5 +1,8 @@
 # .inOutSine()
 
+#### <-- [Easing methods](./methods.md)
+
+
 
 ### Description 
 Calculates an ease-inOut-sine curve interpolation resulting in a smooth, wave-like transition, providing a gentle acceleration and deceleration.

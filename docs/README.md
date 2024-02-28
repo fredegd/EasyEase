@@ -29,7 +29,7 @@ in order to view or change your sketchbook location go to:
 File > Preferences. 
 The "sketchbook location" setting is the first option of the dialog*
 
-###  opt.1: ~~Library manager (not yet available)~~
+###  opt.2: ~~Library manager (not yet available)~~
 ~~Open Processing,~~
 ~~go-to: Sketch > Import Library > Manage Libraries > EasyEase~~
 

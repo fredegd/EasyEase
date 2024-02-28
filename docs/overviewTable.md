@@ -1,7 +1,6 @@
-# Methods overview
+#### <-- [Easing methods](./methods.md)
 
 
-## Easing curves
 
 The library offers flexible functional methods for each of the following easing curves:
 
