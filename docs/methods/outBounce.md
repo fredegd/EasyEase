@@ -1,4 +1,4 @@
-# .outBounce()
+# .outBounce()  
 
 #### <-- [Easing methods](./methods.md)
 
