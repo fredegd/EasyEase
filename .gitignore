@@ -21,8 +21,6 @@ src/*
 
 
 # Build files
-/web-docs/build
-/web-docs/*
 /web-docs
 
 # Production
