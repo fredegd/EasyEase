@@ -39,15 +39,15 @@ void setup() {
   // when setting a different sketch frameRate, is it important
   // to call the  method setFrameRate(float value) as well
   //
-  frameRate(10);
-  controlled.setFrameRate(10);
+  frameRate(60);
+  controlled.setFrameRate(60);
 
   println("object´s frame rate: "+controlled.getFrameRate());
 }
 
 void draw() {
-  background(0);
-  fill(255, 0, 255);
+  background(#f1f1f1);
+  fill(#ff0000);
   noStroke();
   textSize(30);
   textAlign(LEFT);
