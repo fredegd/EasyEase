@@ -215,31 +215,13 @@ public class EasyEase {
 	}
 
 	/**
-	 * Returns the current delay before the easing motion starts.
+	 * Returns the current delay before the easing motion starts.ÏÏÏ
 	 *
 	 * @return The current delay.
 	 */
 	public float getDelay() {
 		return generator.getDelay();
 
-	}
-
-	/**
-	 * Returns the internal counter of the motion .
-	 *
-	 * @return The current counter value .
-	 */
-	public float getCounter() {
-		return generator.getCount();
-	}
-
-	/**
-	 * Set the internal counter of the motion.
-	 *
-	 */
-
-	public void resetCounter() {
-		generator.resetCounter();
 	}
 
 	/**
@@ -325,33 +307,6 @@ public class EasyEase {
 				: type == "alternate" ? "alternate-controlled" : type == "once" ? "one-repetition-controlled" : "";
 		return generator.linear(inputCt, start, end, check);
 	}
-// automated counter
-////////////////////////////////////////////////////////////////////////////////////////////
-
-	/**
-	 * returns a linear value between start and end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float linear(float start, float end) {
-		return generator.linear(defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * returns a linear value between start and end with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float linear(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.linear(defaultCountStart, start, end, check);
-	}
 
 	/////////////////////////////
 	/////////// IN - EXPO
@@ -410,34 +365,6 @@ public class EasyEase {
 		String check = type == "loop" ? "loop-controlled"
 				: type == "alternate" ? "alternate-controlled" : type == "once" ? "one-repetition-controlled" : "";
 		return generator.in(inputCt, start, end, check);
-	}
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-
-	/**
-	 * Applies the in easing method to calculate a value between start and end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float in(float start, float end) {
-		return generator.in(defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the in easing method to calculate a value between start and end with
-	 * a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float in(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.in(defaultCountStart, start, end, check);
 	}
 
 	//
@@ -505,34 +432,6 @@ public class EasyEase {
 		return generator.out(inputCt, start, end, check);
 	}
 
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-	/**
-	 * Applies the out easing method to calculate a value between start and end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float out(float start, float end) {
-		return generator.out(defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the out easing method to calculate a value between start and end with
-	 * a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float out(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.out(defaultCountStart, start, end, check);
-	}
-
 	//
 	//
 	//
@@ -595,34 +494,6 @@ public class EasyEase {
 		String check = type == "loop" ? "loop-controlled"
 				: type == "alternate" ? "alternate-controlled" : type == "once" ? "one-repetition-controlled" : "";
 		return generator.inOut(inputCt, start, end, check);
-	}
-
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-	/**
-	 * Applies the inOut easing method to calculate a value between start and end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float inOut(float start, float end) {
-		return generator.inOut(defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the inOut easing method to calculate a value between start and end
-	 * with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float inOut(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.inOut(defaultCountStart, start, end, check);
 	}
 
 	//
@@ -688,34 +559,6 @@ public class EasyEase {
 				: type == "alternate" ? "alternate-controlled" : type == "once" ? "one-repetition-controlled" : "";
 		return generator.inSine(inputCt, start, end, check);
 	}
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-
-	/**
-	 * Applies the in easing method to calculate a value between start and end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float inSine(float start, float end) {
-		return generator.inSine(defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the inSine easing method to calculate a value between start and end
-	 * with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float inSine(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.inSine(defaultCountStart, start, end, check);
-	}
 
 	//
 	//
@@ -779,34 +622,6 @@ public class EasyEase {
 		String check = type == "loop" ? "loop-controlled"
 				: type == "alternate" ? "alternate-controlled" : type == "once" ? "one-repetition-controlled" : "";
 		return generator.outSine(inputCt, start, end, check);
-	}
-
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-	/**
-	 * Applies the outSine easing method to calculate a value between start and end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float outSine(float start, float end) {
-		return generator.outSine(defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the outSine easing method to calculate a value between start and end
-	 * with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float outSine(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.outSine(defaultCountStart, start, end, check);
 	}
 
 	//
@@ -874,35 +689,6 @@ public class EasyEase {
 		return generator.inOutSine(inputCt, start, end, check);
 	}
 
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-	/**
-	 * Applies the inOutSine easing method to calculate a value between start and
-	 * end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float inOutSine(float start, float end) {
-		return generator.inOutSine(defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the inOutSine easing method to calculate a value between start and
-	 * end with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float inOutSine(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.inOutSine(defaultCountStart, start, end, check);
-	}
-
 	//
 	//
 	//
@@ -965,34 +751,6 @@ public class EasyEase {
 		String check = type == "loop" ? "loop-controlled"
 				: type == "alternate" ? "alternate-controlled" : type == "once" ? "one-repetition-controlled" : "";
 		return generator.inCirc(inputCt, start, end, check);
-	}
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-
-	/**
-	 * Applies the in easing method to calculate a value between start and end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float inCirc(float start, float end) {
-		return generator.inCirc(defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the inCirc easing method to calculate a value between start and end
-	 * with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float inCirc(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.inCirc(defaultCountStart, start, end, check);
 	}
 
 	//
@@ -1057,34 +815,6 @@ public class EasyEase {
 		String check = type == "loop" ? "loop-controlled"
 				: type == "alternate" ? "alternate-controlled" : type == "once" ? "one-repetition-controlled" : "";
 		return generator.outCirc(inputCt, start, end, check);
-	}
-
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-	/**
-	 * Applies the outCirc easing method to calculate a value between start and end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float outCirc(float start, float end) {
-		return generator.outCirc(defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the outCirc easing method to calculate a value between start and end
-	 * with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float outCirc(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.outCirc(defaultCountStart, start, end, check);
 	}
 
 	//
@@ -1152,35 +882,6 @@ public class EasyEase {
 		return generator.inOutCirc(inputCt, start, end, check);
 	}
 
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-	/**
-	 * Applies the inOutCirc easing method to calculate a value between start and
-	 * end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float inOutCirc(float start, float end) {
-		return generator.inOutCirc(defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the inOutCirc easing method to calculate a value between start and
-	 * end with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float inOutCirc(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.inOutCirc(defaultCountStart, start, end, check);
-	}
-
 	//
 	//
 	//
@@ -1243,34 +944,6 @@ public class EasyEase {
 		String check = type == "loop" ? "loop-controlled"
 				: type == "alternate" ? "alternate-controlled" : type == "once" ? "one-repetition-controlled" : "";
 		return generator.inBack(inputCt, start, end, check);
-	}
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-
-	/**
-	 * Applies the in easing method to calculate a value between start and end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float inBack(float start, float end) {
-		return generator.inBack(defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the inBack easing method to calculate a value between start and end
-	 * with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float inBack(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.inBack(defaultCountStart, start, end, check);
 	}
 
 	//
@@ -1335,34 +1008,6 @@ public class EasyEase {
 		String check = type == "loop" ? "loop-controlled"
 				: type == "alternate" ? "alternate-controlled" : type == "once" ? "one-repetition-controlled" : "";
 		return generator.outBack(inputCt, start, end, check);
-	}
-
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-	/**
-	 * Applies the outBack easing method to calculate a value between start and end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float outBack(float start, float end) {
-		return generator.outBack(defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the outBack easing method to calculate a value between start and end
-	 * with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float outBack(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.outBack(defaultCountStart, start, end, check);
 	}
 
 	//
@@ -1430,35 +1075,6 @@ public class EasyEase {
 		return generator.inOutBack(inputCt, start, end, check);
 	}
 
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-	/**
-	 * Applies the inOutBack easing method to calculate a value between start and
-	 * end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float inOutBack(float start, float end) {
-		return generator.inOutBack(defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the inOutBack easing method to calculate a value between start and
-	 * end with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float inOutBack(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.inOutBack(defaultCountStart, start, end, check);
-	}
-
 	//
 	//
 	//
@@ -1522,34 +1138,6 @@ public class EasyEase {
 		String check = type == "loop" ? "loop-controlled"
 				: type == "alternate" ? "alternate-controlled" : type == "once" ? "one-repetition-controlled" : "";
 		return generator.inElastic(inputCt, start, end, check);
-	}
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-
-	/**
-	 * Applies the in easing method to calculate a value between start and end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float inElastic(float start, float end) {
-		return generator.inElastic(this.defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the inElastic easing method to calculate a value between start and
-	 * end with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float inElastic(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.inElastic(this.defaultCountStart, start, end, check);
 	}
 
 	//
@@ -1617,35 +1205,6 @@ public class EasyEase {
 		return generator.outElastic(inputCt, start, end, check);
 	}
 
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-	/**
-	 * Applies the outElastic easing method to calculate a value between start and
-	 * end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float outElastic(float start, float end) {
-		return generator.outElastic(this.defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the outElastic easing method to calculate a value between start and
-	 * end with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float outElastic(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.outElastic(this.defaultCountStart, start, end, check);
-	}
-
 	//
 	//
 	//
@@ -1711,35 +1270,6 @@ public class EasyEase {
 		return generator.inOutElastic(inputCt, start, end, check);
 	}
 
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-	/**
-	 * Applies the inOutElastic easing method to calculate a value between start and
-	 * end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float inOutElastic(float start, float end) {
-		return generator.inOutElastic(this.defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the inOutElastic easing method to calculate a value between start and
-	 * end with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float inOutElastic(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.inOutElastic(this.defaultCountStart, start, end, check);
-	}
-
 	//
 	//
 	//
@@ -1803,34 +1333,6 @@ public class EasyEase {
 		String check = type == "loop" ? "loop-controlled"
 				: type == "alternate" ? "alternate-controlled" : type == "once" ? "one-repetition-controlled" : "";
 		return generator.inBounce(inputCt, start, end, check);
-	}
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-
-	/**
-	 * Applies the in easing method to calculate a value between start and end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float inBounce(float start, float end) {
-		return generator.inBounce(this.defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the inBounce easing method to calculate a value between start and end
-	 * with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float inBounce(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.inBounce(this.defaultCountStart, start, end, check);
 	}
 
 	//
@@ -1898,35 +1400,6 @@ public class EasyEase {
 		return generator.outBounce(inputCt, start, end, check);
 	}
 
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-	/**
-	 * Applies the outBounce easing method to calculate a value between start and
-	 * end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float outBounce(float start, float end) {
-		return generator.outBounce(this.defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the outBounce easing method to calculate a value between start and
-	 * end with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float outBounce(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.outBounce(this.defaultCountStart, start, end, check);
-	}
-
 	//
 	//
 	//
@@ -1991,34 +1464,4 @@ public class EasyEase {
 				: type == "alternate" ? "alternate-controlled" : type == "once" ? "one-repetition-controlled" : "";
 		return generator.inOutBounce(inputCt, start, end, check);
 	}
-
-	// automated counter
-	////////////////////////////////////////////////////////////////////////////////////////////
-	/**
-	 * Applies the inOutBounce easing method to calculate a value between start and
-	 * end.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @return The eased value.
-	 */
-	public float inOutBounce(float start, float end) {
-		return generator.inOutBounce(this.defaultCountStart, start, end, "loop-automated");
-	}
-
-	/**
-	 * Applies the inOutBounce easing method to calculate a value between start and
-	 * end with a specified type.
-	 *
-	 * @param start The starting value.
-	 * @param end   The ending value.
-	 * @param type  The looping options.
-	 * @return The eased value.
-	 */
-	public float inOutBounce(float start, float end, String type) {
-		String check = type == "loop" ? "loop-automated"
-				: type == "alternate" ? "alternate-automated" : type == "once" ? "one-repetition-automated" : "";
-		return generator.inOutBounce(this.defaultCountStart, start, end, check);
-	}
-
 }

@@ -11,8 +11,6 @@ public class EasingMethods {
 	private float delay;
 	private float span;
 	private float motionFrameRate;
-	private float step;
-	private float count = 0;
 	private boolean log;
 
 	private float c1;
@@ -37,7 +35,6 @@ public class EasingMethods {
 		this.span = span;
 		this.delay = delay;
 		this.motionFrameRate = motionFrameRate;
-		this.step = 1f / motionFrameRate;
 
 		this.c1 = this.expIntensity;
 		this.c2 = (float) (this.c1 * 1.5);
@@ -60,7 +57,6 @@ public class EasingMethods {
 	 */
 	public void setFrameRate(float frt) {
 		motionFrameRate = frt;
-		this.step = 1f / frt;
 		if (this.log)
 			System.out.println("Motion Framerate set to " + this.motionFrameRate + "fps");
 	}
@@ -192,23 +188,6 @@ public class EasingMethods {
 	}
 
 	/**
-	 * Gets the internal counter of the easing motion in frames.
-	 *
-	 * @return The internal counter of the easing motion in frames.
-	 */
-	public float getCount() {
-		return (this.count + 1) % (this.totalLength * this.motionFrameRate);
-	}
-
-	/**
-	 * Set the internal counter back to 0.
-	 *
-	 */
-	public void resetCounter() {
-		this.count = 0f;
-	}
-
-	/**
 	 * converts the input value dividing it by the current frameRate.
 	 *
 	 * @param input the frameCount that should be converted
@@ -243,7 +222,7 @@ public class EasingMethods {
 	 * @param max   The maximum value of the range.
 	 * @return The constrained value within the specified range.
 	 */
-	public static float constrain(float value, float min, float max) {
+	private static float constrain(float value, float min, float max) {
 		return Math.min(Math.max(value, min), max);
 	}
 
@@ -256,26 +235,11 @@ public class EasingMethods {
 	 * @param stop  The end of the range.
 	 * @return The normalized value within the specified range.
 	 */
-	public static float normalize(float value, float start, float stop) {
+	private static float normalize(float value, float start, float stop) {
 		return (value - start) / (stop - start);
 	}
 
-	// reMap
-	/**
-	 * maps the input value from the input range (start1 to stop1 to the output
-	 * range (start2 to stop2).
-	 * 
-	 * @param value:  the value to be mapped.
-	 * @param start1: the lower bound of the input range.
-	 * @param stop1:  the upper bound of the input range.
-	 * @param start2: the lower bound of the output range.
-	 * @param stop2:  the upper bound of the output range.
-	 * @return The remapped value from the input range to the output range.
-	 */
-	public static float reMap(float value, float start1, float stop1, float start2, float stop2) {
-		// Map the value from the input range to the output range
-		return start2 + (value - start1) * (stop2 - start2) / (stop1 - start1);
-	}
+	
 
 	// Triangle-wave
 	/**
@@ -286,7 +250,7 @@ public class EasingMethods {
 	 * @param time The time value.
 	 * @return The value of the Triangle wave.
 	 */
-	public static float triWave(float time) {
+	private static float triWave(float time) {
 		float phase = (time % 1);
 		float tri = (phase <= 0.5 ? phase : 1 - phase) * 2;
 		return tri * 0.9999f;
@@ -302,7 +266,7 @@ public class EasingMethods {
 	 * @param delay The delay for the motion.
 	 * @return The normalized count based on the specified motion type and delay.
 	 */
-	public float counter(float ct, float delay, String type) {
+	private float counter(float ct, float delay, String type) {
 
 		float valueToReturn = ct;
 		switch (type) {
@@ -312,40 +276,14 @@ public class EasingMethods {
 			valueToReturn = (ct / this.motionFrameRate) % this.totalLength - delay;
 			break;
 
-		case "loop-automated":
-
-			if (this.count >= ((this.totalLength) * this.motionFrameRate) - this.step) {
-				this.count = 0f;
-			}
-			valueToReturn = (this.count / this.motionFrameRate - delay);
-			this.count += (this.step * this.motionFrameRate);
-			break;
-		////// what about the delay here?
 		case "alternate-controlled":
 			valueToReturn = (triWave((ct / (this.motionFrameRate * 2)) / (this.totalLength)) * this.totalLength - delay)
 					% this.totalLength;
-			break;
-		////// what about the delay here?
-
-		case "alternate-automated":
-
-			valueToReturn = (triWave((this.count / this.motionFrameRate) / (2 * this.totalLength)) * this.totalLength
-					- delay) % this.totalLength;
-			this.count += (this.step * this.motionFrameRate);
 			break;
 
 		case "one-repetition-controlled":
 
 			valueToReturn = Math.min((ct / this.motionFrameRate - delay), this.totalLength);
-			break;
-
-		case "one-repetition-automated":
-
-			if (this.count >= ((this.totalLength) * this.motionFrameRate)) {
-				this.count = this.totalLength * this.motionFrameRate;
-			}
-			valueToReturn = Math.min((this.count / this.motionFrameRate - delay), this.totalLength);
-			this.count += (step * this.motionFrameRate);
 			break;
 
 		default:
