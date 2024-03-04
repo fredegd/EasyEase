@@ -20,8 +20,9 @@ src/*
 /web-docs/node_modules
 
 
-# Build files
+# docs bulder
 /web-docs
+/mkdcs
 
 # Production
 /build
