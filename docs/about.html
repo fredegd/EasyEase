@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="stylesheets/style.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -67,7 +67,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -124,7 +124,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
@@ -134,7 +134,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
@@ -148,6 +148,43 @@
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     
     
       <div class="md-header__source">
@@ -1185,27 +1222,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tools/setLog.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    .setLog()
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1439,6 +1455,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tools/setLog.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    .setLog()
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1570,9 +1607,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#inspiration" class="md-nav__link">
+  <a href="#general-purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Inspiration
+      General Purpose
     </span>
   </a>
   
@@ -1669,6 +1706,15 @@
   <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referneces-and-inspiration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referneces and Inspiration
     </span>
   </a>
   
@@ -1709,9 +1755,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#inspiration" class="md-nav__link">
+  <a href="#general-purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Inspiration
+      General Purpose
     </span>
   </a>
   
@@ -1813,6 +1859,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#referneces-and-inspiration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referneces and Inspiration
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1832,54 +1887,55 @@
 
 
 <h1 id="about-easyease">About EasyEase</h1>
-<h2 id="inspiration">Inspiration</h2>
-<p>those Websites had provided a great amount of informative material and a big source of inspiration, which turned useful in creating this library</p>
-<ul>
-<li><a href="https://easings.net/#">Easing Functions</a> by Andrey Sitnik and Ivan Solovev
--<a href="https://sighack.com/"></a></li>
-</ul>
+<h2 id="general-purpose">General Purpose</h2>
+<p>The purpose of this library is to a have a ready-to-use setup in order to easily apply easing functions to a spatial distribution or an animations, .</p>
 <h2 id="testedplatforms">TestedPlatforms:</h2>
 <ul>
 <li>OS-X</li>
-<li><del>Windows</del></li>
+<li><del>Windows</del> </li>
 <li><del>Linux</del></li>
 </ul>
 <h5 id="-processing">- Processing:</h5>
 <p>The latest Processing version the library has been tested with: <strong>4.1.1</strong></p>
-<p><br>
-<br></p>
+<p><br></p>
 <h3 id="dependencies">Dependencies:</h3>
 <p>EasyEase depends on no other libraries</p>
-<p><br>
-<br></p>
+<p><br></p>
 <h3 id="examples">Examples:</h3>
 <ul>
 <li><a href="examples.html">all examples</a></li>
 </ul>
-<p><br>
-<br></p>
+<p><br></p>
 <h2 id="source">Source</h2>
 <p>source code can be found <a href="https://github.com/fredegd/EasyEase/tree/main/src/easy/ease">here</a></p>
-<p><br>
-<br></p>
+<p><br></p>
 <h2 id="guidelines">Guidelines</h2>
 <p>This Library was written is in accordance with the Processing <a href="https://github.com/benfry/processing4/wiki/Library-Guidelines">library guidelines</a></p>
-<p><br>
-<br></p>
+<p><br></p>
 <h2 id="keywords">Keywords:</h2>
 <p>easing , motion, easing-curve, gradient, non-linear, curve, interpolation</p>
-<p><br>
-<br></p>
+<p><br></p>
 <h2 id="last-update">Last update</h2>
 <p>March 2024</p>
-<p><br>
-<br></p>
+<p><br></p>
 <h2 id="issues">Issues</h2>
 <p>Issues, unexpected bugs and behaviors, or any kind of suggestion or improvement is highly welcome and can be posted <a href="https://github.com/fredegd/EasyEase/issues">here</a></p>
-<p><br>
-<br></p>
+<p><br></p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <p>If you're having trouble, have a look at the <a href="https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library">Processing Wiki</a> for further information, please contact the <a href="https://fredegd.dev">author</a>.</p>
+<h2 id="referneces-and-inspiration">Referneces and Inspiration</h2>
+<p>Those sources had provided a lot of inspiration as well as a big amount of informative material which turned useful in creating this library</p>
+<ul>
+<li>
+<p><a href="https://easings.net/#">Easing Functions</a> by Andrey Sitnik and Ivan Solovev</p>
+</li>
+<li>
+<p><a href="https://sighack.com/">Sighack</a>: Easing Functions in Processing</p>
+</li>
+<li>
+<p><a href="https://solhsa.com/interpolation/">Sol_HSA</a>: Easing Functions in Processing</p>
+</li>
+</ul>
 
 
 
@@ -1939,7 +1995,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2024  https://fredegd.dev/
+      Copyright &copy; 2024  {{https://fredegd.dev/}}
     </div>
   
   
@@ -1960,7 +2016,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.code.highlight", "content.code.annotate", "navigation.top", "navigation.footer", "header.autohide"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.code.select", "content.code.highlight", "content.code.annotate", "navigation.top", "navigation.footer", "header.autohide"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="assets/javascripts/bundle.c8d2eff1.min.js"></script>
