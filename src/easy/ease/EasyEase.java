@@ -19,13 +19,13 @@ public class EasyEase {
 	 */
 	private EasingMethods generator;
 	/**
-	 * @see motionFrameRate The default frame rate value for motion calculations
+	 * @see frameRate_ The default frame rate value for motion calculations
 	 */
-	public float motionFrameRate = 60f; /////////////// default value like default frameRate
+	public float frameRate_ = 60f; /////////////// default value like default frameRate
 	/**
 	 * @see step the value which gets added to the counter at each frame
 	 */
-	public float step = 1f / motionFrameRate;////////////////////////////// default value 1/60
+	public float step = 1f / frameRate_;////////////////////////////// default value 1/60
 	/**
 	 * @see totalLength The maximum and total length of the easing motion
 	 */
@@ -39,9 +39,9 @@ public class EasyEase {
 	 */
 	public float span = totalLength - delay; //////////////////////// default value: 1 second.
 	/**
-	 * @see expIntensity The value of the intensity factor
+	 * @see intensity The value of the intensity factor
 	 */
-	public float expIntensity = 1.0f; /////////////////////////////// default factor value: 1
+	public float intensity = 1.0f; /////////////////////////////// default factor value: 1
 
 	private final float defaultStart = 0f;/////////////////////////// default factor value: 0
 
@@ -58,14 +58,14 @@ public class EasyEase {
 	 * parameters.
 	 * 
 	 * @param theSketch    The parent PApplet.
-	 * @param expIntensity The intensity/exponent value of the easing curve.
+	 * @param intensity The intensity/exponent value of the easing curve.
 	 * @param totalLength  The maximum and total length of the easing motion
 	 * @param span         The span of the easing motion.
 	 * @param delay        The delay before the easing motion starts.
 	 */
-	public EasyEase(PApplet theSketch, float expIntensity, float totalLength, float span, float delay) {
+	public EasyEase(PApplet theSketch, float intensity, float totalLength, float span, float delay) {
 		init(theSketch);
-		generator = new EasingMethods(expIntensity, totalLength, span, delay, this.motionFrameRate);
+		generator = new EasingMethods(intensity, totalLength, span, delay, this.frameRate_);
 	}
 
 	/**
@@ -73,11 +73,11 @@ public class EasyEase {
 	 * exponent/intensity value.
 	 * 
 	 * @param theSketch    The parent PApplet.
-	 * @param expIntensity The intensity/exponent value of the easing curve.
+	 * @param intensity The intensity/exponent value of the easing curve.
 	 */
-	public EasyEase(PApplet theSketch, float expIntensity) {
+	public EasyEase(PApplet theSketch, float intensity) {
 		init(theSketch);
-		generator = new EasingMethods(expIntensity, this.totalLength, this.span, this.delay, this.motionFrameRate);
+		generator = new EasingMethods(intensity, this.totalLength, this.span, this.delay, this.frameRate_);
 
 	}
 
@@ -89,7 +89,7 @@ public class EasyEase {
 	 */
 	public EasyEase(PApplet theSketch) {
 		init(theSketch);
-		generator = new EasingMethods(1f, this.totalLength, this.span, this.delay, this.motionFrameRate);
+		generator = new EasingMethods(this.intensity, this.totalLength, this.span, this.delay, this.frameRate_);
 
 	}
 
@@ -108,7 +108,7 @@ public class EasyEase {
 	 */
 	private void init(PApplet theSketch) {
 		sketch = theSketch;
-		this.motionFrameRate = sketch.frameRate;
+		this.frameRate_ = sketch.frameRate;
 	}
 
 	/**
