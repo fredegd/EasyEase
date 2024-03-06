@@ -21,14 +21,12 @@ src/*
 
 
 # docs bulder
-/web-docs
 /mkdcs
 
 # Production
 /build
 
 # Generated files
-.docusaurus
 .cache-loader
 
 # Misc
@@ -41,8 +39,3 @@ src/*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-/docute
-/hugodocs
-
-/documentation
