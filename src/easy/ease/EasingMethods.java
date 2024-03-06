@@ -127,8 +127,15 @@ public class EasingMethods {
 			if (this.log)
 				System.out.println("### \n  # setSpan WARNING: a total Length of " + this.totalLength + " sec.\n"
 						+ "  # and a delay of " + this.delay + " sec. has been set.  \n"
-						+ "  # Currently, the max. allowed Motion span is " + ref + " sec.\n###");
+						+ "  # Currently, the max. allowed Motion span is " + ref + " sec.\n  #\n"
+						+ "  # Motion span is now set to " + ref + "sec.\n###");
 			this.span = ref;
+		} else if (length <= 0.0) {
+			this.span = this.totalLength / this.motionFrameRate;
+			System.out.println("### \n  # setSpan WARNING: setting a span value  \n"
+					+ "  # less than or equal to 0.0 is not allowed  \n  #\n" 
+					+ "  # Motion span will be set to the least available value: "
+					+ this.span + "sec.\n###");
 		} else if (length <= ref) {
 			this.span = length;
 		}
@@ -238,8 +245,6 @@ public class EasingMethods {
 	private static float normalize(float value, float start, float stop) {
 		return (value - start) / (stop - start);
 	}
-
-	
 
 	// Triangle-wave
 	/**
