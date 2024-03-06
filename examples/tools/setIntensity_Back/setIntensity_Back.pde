@@ -1,4 +1,17 @@
-import easy.ease.*;
+/**
+ * EasyEase
+ * A collection of easing function for Processing.
+ *
+ * https://fredegd.github.io/EasyEase/
+ *
+ * Example: set intensity
+ *
+ * This sketch demonstrates how to set the intensity parameter
+ * and apply it to an Back easing function.
+ *
+ * @author      Fred Egidi  -  https://github.com/fredegd
+ */
+ import easy.ease.*;
 
 EasyEase curve = new EasyEase(this);
 

@@ -4,7 +4,7 @@
  *
  * https://fredegd.github.io/EasyEase/
  *
- * Example: framer Method
+ * Example: framer tool
  *
  * this example shows how to use and leverage the power
  * of the framer  method.

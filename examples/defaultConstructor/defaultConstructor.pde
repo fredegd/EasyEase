@@ -1,4 +1,17 @@
-import easy.ease.*;
+/**
+ * EasyEase
+ * A collection of easing function for Processing.
+ *
+ * https://fredegd.github.io/EasyEase/
+ *
+ * Example: Constructor default
+ *
+ * Comparing the result of the easing distribution VS a linear distribution
+ *
+ * @author      Fred Egidi  -  https://github.com/fredegd
+ */
+ 
+ import easy.ease.*;
 
 float intensity = 4.3;
 float totalLength = 1;

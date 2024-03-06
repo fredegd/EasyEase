@@ -4,10 +4,10 @@
  *
  * https://fredegd.github.io/EasyEase/
  *
- * Example: ease_In_method
+ * Example: Linear Tool
  *
- * automate the motion from 0 to 1
- * taking the frameCount as a motion controller
+ * automate from 0 to 1 taking the frameCount as a 
+ * motion controller returning a linear motion
  *
  * the result motion cycles from 0 to 1
  *
@@ -25,8 +25,6 @@ EasyEase curve = new EasyEase(this);
 void setup() {
   size(600, 400);
   curve.setTotalLength(totalLength);
-  //curve.setSpan(span);
-  //curve.setDelay(delay);
 }
 
 void draw() {

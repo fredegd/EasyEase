@@ -32,13 +32,14 @@ void setup() {
   targetX=mouseX;
   targetY=mouseY;
 }
+  float counter = 0 ; 
 
 void draw() {
   background(0);
   fill(255);
   noStroke();
-  float x = xMove.outElastic(startX, targetX, "once");
-  float y = yMove.outElastic(startY, targetY, "once");
+  float x = xMove.outElastic(counter, startX, targetX, "once");
+  float y = yMove.outElastic(counter, startY, targetY, "once");
   ellipse(x, y, 200, 200);
 
   pointer();
@@ -57,11 +58,12 @@ void pointer() {
   stroke(#ff0000);
   line(mouseX-30, mouseY, mouseX+30, mouseY);
   line(mouseX, mouseY-30, mouseX, mouseY+30);
+  
+  counter+= 1/60.0;
 }
 
 void mouseReleased() {
-  xMove.resetCounter();
-  yMove.resetCounter();
+ counter = 0;
 
   float tempX =mouseX;
   startX=  targetX;
