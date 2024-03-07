@@ -8,7 +8,17 @@
  *
  * This sketch demonstrates how to set the framerate parameter
  *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  * @author      Fred Egidi  -  https://github.com/fredegd
+ *
+ *
+ *
  */
 import easy.ease.*;
 
@@ -34,7 +44,7 @@ void draw() {
   float newFrameRate = int(map(refX, start, stopX, 2, 60));
 
   //when setting a different `frameRate` for the object,
-  //the sketch `frameRate` shoulb be set accordingly
+  //the sketch `frameRate` should be set accordingly
   frameRate(newFrameRate);
   curve.setFrameRate(newFrameRate);
 

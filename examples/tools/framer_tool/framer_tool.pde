@@ -13,13 +13,13 @@
  * the input value divided by the frame rate
  * default frameRate is 60.0
  *
- * it might be useful when the frameCount or any
- * similar increasing value
+ * it is  useful  to convert the frameCount or any other
+ * similar increasing value dividing it by the frameRate
  *
  * @author      Fred Egidi  -  https://github.com/fredegd
  *
+ *
  */
-
 import easy.ease.*;
 
 float intensity = 3.0;

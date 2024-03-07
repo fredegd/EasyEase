@@ -11,7 +11,13 @@
  *
  * the result motion cycles from 0 to 1
  *
+ *
+ *
+ *
+ *
  * @author      Fred Egidi  -  https://github.com/fredegd
+ *
+ *
  *
  */
 import easy.ease.*;

@@ -8,7 +8,17 @@
  *
  * This sketch demonstrates how to set the intensity parameter
  *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  * @author      Fred Egidi  -  https://github.com/fredegd
+ *
+ *
+ *
  */
  import easy.ease.*;
 

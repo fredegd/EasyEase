@@ -8,10 +8,19 @@
  *
  * This sketch demonstrates how to set the span of the motion.
  *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  * @author      Fred Egidi  -  https://github.com/fredegd
+ *
+ *
+ *
  */
- 
- import easy.ease.*;
+import easy.ease.*;
 
 EasyEase curve = new EasyEase(this, 5);
 EasyEase reference = new EasyEase(this, 1, 2, 2, 0);
@@ -47,5 +56,5 @@ void draw() {
   line(refX, 370, refX, 390);
 
   line(50, 20, reference.linear(motor, start, stopX), 20);
-  rec(30,900);
+  rec(30, 900);
 }

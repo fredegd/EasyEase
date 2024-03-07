@@ -1,18 +1,26 @@
 /**
- * EasyEase
- * A collection of easing function for Processing.
- *
- * https://fredegd.github.io/EasyEase/
- *
- * Example: Constructor default
- *
- * Comparing the result of the easing distribution VS a linear distribution
- *
- * @author      Fred Egidi  -  https://github.com/fredegd
- */
-
+* EasyEase
+* A collection of easing function for Processing.
+*
+* https://fredegd.github.io/EasyEase/
+*
+* Example: Constructor default
+*
+* Constructs an instance of the EasyEase Class expecting
+* this as a reference to the current sketch, and a  float value
+* for the intensity as arguments.
+*
+* It assigns default values for other global parameters intesity, 
+* totalLength, curveSpan, and delay.
+*
+*
+*
+*
+* @author      Fred Egidi  -  https://github.com/fredegd
+*
+*
+*/
 import easy.ease.*;
-
 
 // construct an instance of the EaseEase Class called curve
 // passing "this" as a reference to the current sketch

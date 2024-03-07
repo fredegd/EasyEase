@@ -17,11 +17,13 @@ src/*
 
 # Dependencies
 /node_modules
-/web-docs/node_modules
+/web-docs/
 
 
 # docs bulder
+/mkdocsGenerator
 /mkdcs
+/mkdocs.yml
 
 # Production
 /build
