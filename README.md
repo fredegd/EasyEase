@@ -4,13 +4,19 @@ Easing Function and non linear distribution utilities for [Processing](https://p
 
 ![Demo](./docs/images/promoBanner.gif)
 
+<br>
+
 ## General Purpose
 
 **EasyEase** provides a ready-to-use setup for in order to apply [easing curves](https://fredegd.github.io/EasyEase/#/./overviewTable) to a spatial distribution or an animations, resulting in more natural and visually appealing effects.
 
+<br>
+
 ## Download:
 
 [here](https://github.com/fredegd/EasyEase/releases) the latest release, including the library, documentation and examples. in **.zip** format
+
+<br>
 
 ## Installation
 
@@ -30,9 +36,13 @@ The "sketchbook location" setting is the first option of the dialog_
 ~~Open Processing,~~
 ~~go-to: Sketch > Import Library > Manage Libraries > EasyEase~~
 
+<br>
+
 ## Documentation
 
-Documentation can be found at this [link](https://fredegd.github.io/EasyEase).
+Documentation can be found [here at this link](https://fredegd.github.io/EasyEase).
+
+<br>
 
 ## Basic Usage
 
@@ -87,46 +97,59 @@ void draw() {
 
 </div>
 
+<br>
+
 ## TestedPlatforms:
 
 - OS-X
-- ~~Windows~~
-- ~~Linux~~
+- Windows
+- Linux
 
 ### Processing:
 
-The latest Processing version the library has been tested with: **4.1.1**
+The latest Processing version the library has been tested with: **4.3**
+
+<br>
 
 ### Dependencies:
 
 EasyEase depends on no other libraries
 
+<br>
+
 ### Other Examples:
 
-- 1
-- 2
-- 3
-- 4
+a list of explanatory and beginner-friendly examples can be fund [here](https://fredegd.github.io/EasyEase/examples.html)
 
 ## Source
 
-https://github.com/fredegd/EasyEase
+The source Code is open-source and can be found [here] https://github.com/fredegd/EasyEase
 
-#### This Library was written is in accordance with the Processing library guidelines
+<br>
 
-[info](https://github.com/benfry/processing4/wiki/Library-Guidelines)
+## Processing library guidelines
+
+This Library was written is in accordance with the Processing [Library Guidelines](https://github.com/benfry/processing4/wiki/Library-Guidelines)
+
+<br>
 
 ### Keywords:
 
 easing , motion, easing-curve, gradient, non-linear, curve, interpolation
 
+<br>
+
 ### Last update
 
-February 2024
+March 2024
+
+<br>
 
 ### Issues
 
 Issues, unexpected bugs and behaviors, or any kind of suggestion or improvement is highly welcome and can be posted [here](https://github.com/fredegd/EasyEase/issues)
+
+<br>
 
 ### Troubleshooting
 
