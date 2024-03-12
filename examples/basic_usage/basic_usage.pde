@@ -6,8 +6,8 @@
 *
 * Example: Basic Usage
 *
-* a basic example of how to use EasyEase to animate a rectangle
-*
+* a basic example of how to use EasyEase 
+* to animate a rectangle
 *
 *
 *
@@ -33,8 +33,8 @@ void draw() {
     float stop = 400;
     float framedCount = curve.framer(frameCount * 0.5);
     
-    float x = curve.inOut(framedCount,start, stop);
-    float y = curve.linear(framedCount,0, height - 100);
+    float x = curve.inOut(framedCount, start, stop);
+    float y = curve.linear(framedCount, 0, height - 100);
     
     fill(255, 0, 0);
     rect(x, y, 100,100);
