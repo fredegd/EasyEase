@@ -202,7 +202,7 @@ public class EasingMethods {
 	 */
 	public float framer(float input) {
 
-		return input == 0 ? 0f : ((input - 1) / this.motionFrameRate);
+		return  (input / this.motionFrameRate);
 	}
 
 	/**
@@ -278,7 +278,7 @@ public class EasingMethods {
 
 		case "loop-controlled":
 
-			valueToReturn = (ct / this.motionFrameRate) % this.totalLength - delay;
+			valueToReturn = (ct / this.motionFrameRate - delay) % this.totalLength ;
 			break;
 
 		case "alternate-controlled":
@@ -323,7 +323,7 @@ public class EasingMethods {
 
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
-		return (float) (start + progress * (end - start));
+		return (start + progress * (end - start));
 	}
 	///////////////////////////////////////////////////
 	// Easing Methods
@@ -529,7 +529,7 @@ public class EasingMethods {
 		float ex = this.expIntensity;
 		float ct = counter(inputCt * this.motionFrameRate, this.delay, type);
 		float progress = normalize(constrain(ct, 0, this.span), 0, this.span);
-		return (float) (start + Math.sqrt(1 - Math.pow(progress - 1, Math.abs(ex * 2))) * (end - start));
+		return (float) (start + Math.sqrt(1 - Math.pow(-1*progress + 1, Math.abs(ex * 2))) * (end - start));
 
 	}
 

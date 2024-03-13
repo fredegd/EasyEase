@@ -19,7 +19,7 @@ EasyEase curve = new EasyEase(this);
 void setup() {
   size(600, 600);
   //set the curve's exponential intensity
-  curve.setIntensity(1);
+  curve.setIntensity(11);
 }
 void draw() {
   float start = 50;
@@ -42,4 +42,8 @@ void draw() {
     vertex(x, y);
   }
   endShape();
+
+
+  float outCirc = curve.outCirc(counter, "once")*width;
+  ellipse(outCirc, 270, 10, 30);
 }

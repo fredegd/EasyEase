@@ -2,6 +2,7 @@ bin
 tmp
 web
 lib
+data
 distribution
 resources
 src/*

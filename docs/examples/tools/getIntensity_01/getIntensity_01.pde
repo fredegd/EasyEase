@@ -26,7 +26,7 @@ EasyEase curve = new EasyEase(this, 4.0);
 
 void setup() {
     size(600, 400);
-    
+    float intensity = curve.getIntensity();
     // prints 4.0 to the console
-    println(curve.getIntensity());
+    println(intensity);
 }

@@ -140,8 +140,6 @@
   opacity: 0;
 }
 .fixImg > img {
-  /* max-height: 200px; */
-  /* max-width: 200px; */
   margin: 0;
   padding: 0;
 }
@@ -151,11 +149,8 @@
   opacity: 0;
 }
 .gifImg > img {
-  /* max-width: 200px; */
-  /* max-height: 200px; */
   margin: 0;
   padding: 0;
-  /* transform: rotateX(180deg); */
 }
 
 .gifImg:hover {

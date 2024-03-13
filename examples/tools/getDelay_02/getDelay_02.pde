@@ -25,8 +25,8 @@ import easy.ease.*;
 EasyEase curve = new EasyEase(this, 4.0, 2.0, 1.5, 0.5);
 
 void setup() {
-  size(600, 400);
-  println(curve.getDelay());
+    size(600, 400);
+    float delay = curve.getDelay();
+    // prints 0.5 to the console
+    println(delay);
 }
-
-// prints 0.5 to the console

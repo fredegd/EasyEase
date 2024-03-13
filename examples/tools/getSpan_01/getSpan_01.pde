@@ -22,11 +22,11 @@
 */
 import easy.ease.*;
 
-EasyEase curve = new EasyEase(this, 4.0);
+EasyEase curve = new EasyEase(this, 4.0, 2.0, 1.5, 0.5);
 
 void setup() {
     size(600, 400);
-    
-    // prints 4.0 to the console
-    println(curve.getIntensity());
+    float span = curve.getSpan();
+    // prints 1.5 to the console
+    println(span);
 }
