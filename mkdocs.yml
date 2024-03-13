@@ -1,0 +1,161 @@
+site_name: Easy Ease
+
+# site_url: "" # "for offline documentation"
+use_directory_urls: false # "for offline documentation"
+
+# prebuild_index: true
+
+site_url: "https://fredegd.github.io/EasyEase/"
+plugins:
+  - search:
+      # min_search_length: 2
+      # indexing: 'full'
+  - offline
+
+theme:
+  name: material
+  features:
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.select
+    - content.code.highlight
+    - content.code.annotate
+    # - navigation.path
+    # - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - header.autohide
+
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      accent: amber
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: amber
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.betterem
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path:
+        [
+          "./examples/",
+          "./examples/",
+          "./examples/basic_usage",
+          "./examples/constructors",
+          "./examples/cycling_options",
+          "./examples/methods",
+          "./examples/tools",
+        ]
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+docs_dir: mkdocsGenerator
+
+site_dir: docs
+
+repo_url: https://github.com/fredegd/EasyEase
+
+repo_name: "GitHub"
+
+edit_uri: "blob/main/docs/"
+
+site_description: "Easing Function and non linear distribution utilities for Processing IDE"
+
+site_author: "Fred Egidi"
+
+copyright: Copyright &copy; 2024  <a href="https://fredegd.dev/" target="_blank">Fred Egidi</a> </br>  
+
+extra:
+  link: "https://fredegd.github.io/EasyEase/"
+  generator: false
+
+
+extra_css:
+  - stylesheets/style.css
+
+nav:
+  - Home: index.md
+
+  - Get Started: getting-started.md
+  - Constructors: constructors.md
+  - Global Parameters: globalParameters.md
+  - Methods:
+      - "Easing Methods": methods.md
+      - "Overview Table": methods/overviewTable.md
+      - "Exponential Easing":
+          - ".in()": methods/inExpo.md
+          - ".out()": methods/outExpo.md
+          - ".inOut()": methods/inOutExpo.md
+      - "Back Easing":
+          - ".inBack()": methods/inBack.md
+          - ".outBack()": methods/outBack.md
+          - ".inOutBack()": methods/inOutBack.md
+      - "Circular Easing":
+          - ".inCirc()": methods/inCirc.md
+          - ".outCirc()": methods/outCirc.md
+          - ".inOutCirc()": methods/inOutCirc.md
+      - "Sinusoidal Easing":
+          - ".inSine()": methods/inSine.md
+          - ".outSine()": methods/outSine.md
+          - ".inOutSine()": methods/inOutSine.md
+      - "Elastic Easing":
+          - ".inElastic()": methods/inElastic.md
+          - ".outElastic()": methods/outElastic.md
+          - ".inOutElastic()": methods/inOutElastic.md
+      - "Bounce Easing":
+          - ".inBounce()": methods/inBounce.md
+          - ".outBounce()": methods/outBounce.md
+          - ".inOutBounce()": methods/inOutBounce.md
+
+  - Tools:
+      - "functional tools": tools.md
+
+      - "setter functions":
+          - ".setIntensity()": tools/setIntensity.md
+          - ".setTotalLength()": tools/setTotalLength.md
+          - ".setSpan()": tools/setSpan.md
+          - ".setDelay()": tools/setDelay.md
+          - ".setFrameRate()": tools/setFrameRate.md
+      - "getter functions":
+          - ".getIntensity()": tools/getIntensity.md
+          - ".getTotalLength()": tools/getTotalLength.md
+          - ".getSpan()": tools/getSpan.md
+          - ".getDelay()": tools/getDelay.md
+          - ".getFrameRate()": tools/getFrameRate.md
+      - "helper functions":
+          - ".framer()": tools/framer.md
+          - ".linear()": tools/linear.md
+          - ".setLog()": tools/setLog.md
+
+  - Examples:
+      - "all examples": examples.md
+
+  - About: about.md
