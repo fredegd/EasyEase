@@ -26,7 +26,7 @@ EasyEase curve = new EasyEase(this, 4.0, 2.0, 2.0, 0.0);
 
 void setup() {
   size(600, 400);
-  float totalLength = curve.getTotalLenght();
+  float totalLength = curve.getTotalLength();
   // prints 2.0 to the console
   println(totalLength);
 }

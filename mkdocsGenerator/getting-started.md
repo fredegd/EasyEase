@@ -23,7 +23,14 @@ It includes the library, documentation and examples.
 
 ## Installation
 
-### opt.1: Manually install:
+### opt.1: Library manager
+
+Open Processing,  go-to: Sketch > Import Library > Manage Libraries > EasyEase
+
+
+<br>
+
+### opt.2: Manually install:
 
 - [Download]("https://github.com/fredegd/EasyEase/releases") the latest release of the library.
 
@@ -38,17 +45,14 @@ It includes the library, documentation and examples.
 
 <br>
 
----
-
-### opt.2: <del>Library manager</del>
-
-<del> Open Processing, go-to: Sketch > Import Library > Manage Libraries > EasyEase </del>
-
 !!! info
 
     see also the Processing guidelines on [How-to-Install-a-Contributed-Library](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library)
 
-<br>
+
+---
+
+
 
 ---
 
