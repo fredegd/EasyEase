@@ -20,7 +20,12 @@ Easing Function and non linear distribution utilities for [Processing](https://p
 
 ## Installation
 
-### opt.1: Manually install:
+### opt.1: Library manager
+
+Open Processing,
+go-to: Sketch > Import Library > Manage Libraries > EasyEase
+
+### opt.2: Manually install:
 
 - [Download]("https://github.com/fredegd/EasyEase/releases") the latest release of the library.
 
@@ -30,11 +35,6 @@ _note: sketchbook's /libraries folder is usually located under /User/Yourname/Do
 in order to view or change your sketchbook location go to:
 File > Preferences.
 The "sketchbook location" setting is the first option of the dialog_
-
-### opt.2: ~~Library manager (not yet available)~~
-
-~~Open Processing,~~
-~~go-to: Sketch > Import Library > Manage Libraries > EasyEase~~
 
 <br>
 
