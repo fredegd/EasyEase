@@ -48,10 +48,10 @@ void draw() {
     
     //
     //updating the bg color by applying the curve
-    bgCol = curve.inOut(motor, 0, 255, "loop");
+    bgCol = curve.inOut(motor, 0, 255, "alternate");
     //
     //some graphic indicators
-    float statInd = curve.inOut(motor, height - 50, 50, "loop");
+    float statInd = curve.inOut(motor, height - 50, 50, "alternate");
     float motInd = width - map(motor, 0, totalLength, width / 2, width * 1.5) % width;
     stroke(255, 0, 0);
     line(0, statInd, width, statInd);
@@ -64,7 +64,7 @@ void draw() {
     for (float i = 0; i < totalLength; i += (totalLength / 60.0)) {
         float shapeMotor = (i + motor - totalLength / 2);
         float x = map(i, 0, totalLength, 0, width);
-        float y = curve.inOut(shapeMotor, height - 50, 50, "loop");
+        float y = curve.inOut(shapeMotor, height - 50, 50, "alternate");
         vertex(x, y);
 }
     endShape();

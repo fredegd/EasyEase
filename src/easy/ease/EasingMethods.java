@@ -278,21 +278,21 @@ public class EasingMethods {
 
 		case "loop-controlled":
 
-			valueToReturn = (ct / this.motionFrameRate - delay) % this.totalLength ;
+			valueToReturn = (ct / this.motionFrameRate ) % this.totalLength - delay ;
 			break;
 
 		case "alternate-controlled":
-			valueToReturn = (triWave((ct / (this.motionFrameRate * 2)) / (this.totalLength)) * this.totalLength - delay)
-					% this.totalLength;
+			valueToReturn = (triWave((ct / (this.motionFrameRate * 2)) / (this.totalLength)) * this.totalLength )
+					% this.totalLength - delay;
 			break;
 
 		case "one-repetition-controlled":
 
-			valueToReturn = Math.min((ct / this.motionFrameRate - delay), this.totalLength);
+			valueToReturn = Math.min((ct / this.motionFrameRate ), this.totalLength) - delay;
 			break;
 
 		default:
-			valueToReturn = (ct / this.motionFrameRate - delay) % this.totalLength;
+			valueToReturn = (ct / this.motionFrameRate ) % this.totalLength - delay;
 			break;
 		}
 
